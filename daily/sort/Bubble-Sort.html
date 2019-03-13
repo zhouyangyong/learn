@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>冒泡排序</title>
+</head>
+<body>
+<script>
+function bubbleSort(arr){
+    var l=arr.length,
+        warp,
+        swap;
+    for(var i = l-1; i >= 0; i--){
+        warp = false;
+        for(var j = 0; j < i; j++){
+            if(arr[j] > arr[j+1]){
+                warp = true;
+                //swap(arr,j,j+1);
+                swap = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j] = swap;
+            }
+        }
+        if(!warp){
+            break;
+        }
+    }
+    return arr;
+}
+</script>
+</body>
+</html>
