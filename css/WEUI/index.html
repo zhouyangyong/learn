@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page">
+            <div class="page__hd">
+                <h1 class="page__title">Botton</h1>
+                <p class="page__desc">按钮</p>
+            </div>
+            <div class="page__bd">
+                <a href="#" class="weui__btn weui-btn__primary" id="primary">页面主操作 mormol</a>
+                <a href="#" class="weui__btn weui-btn__loading">
+                    <i class="weui-loading"></i>
+                    页面主操作 loading
+                </a>
+                <a href="#" class="weui__btn weui-btn__love">他还好吗 我还想爱他</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var oPrimary = document.getElementById('primary');
+        // console.log(oPrimary);
+        oPrimary.onclick = function () {
+            // this.innerHTML = "是你的心啊 孤单的留着";
+            this.classList.add('active');
+        }
+    </script>
+</body>
+</html>
