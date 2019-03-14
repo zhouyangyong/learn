@@ -9,6 +9,10 @@ html,body{
     height: 100%;
 }
 
+.active{
+    border-color: blue !important;
+}
+
 .pay-page{
     height: 100%;
     background-color: #f5fafe;
