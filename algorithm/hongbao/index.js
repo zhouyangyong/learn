@@ -20,5 +20,5 @@ const hongbao = (totle,num) => {
     arr.push(restAmount.toFixed(2));
     return arr;
 }
-
+console.log(typeof amount);
 console.log(hongbao(20,47));

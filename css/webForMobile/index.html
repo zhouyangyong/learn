@@ -79,6 +79,17 @@
                 this.classList.add('active');
             })
         }
+
+        var payWay = document.querySelectorAll('.pay-btn');
+        // var theWay = document.querySelectorAll('.pay-wrapper');
+        for(let i = 0; i < payWay.length; i++){
+            payWay[i].addEventListener('click',function() {
+                for(let j of payWay){
+                    j.classList.remove('change');
+                }
+                this.classList.add('change');
+            })
+        }
     </script>
 </body>
 </html>

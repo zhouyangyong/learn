@@ -13,6 +13,10 @@ html,body{
     border-color: blue !important;
 }
 
+.change{
+    background-color: blue !important;   
+}
+
 .pay-page{
     height: 100%;
     background-color: #f5fafe;
@@ -154,3 +158,4 @@ html,body{
     line-height: 2.45rem;
     color: #fff;
 }
+
