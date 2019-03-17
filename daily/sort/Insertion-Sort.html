@@ -7,6 +7,21 @@
     <title>插入排序</title>
 </head>
 <body>
-    
+    <script>
+        function insertionSort(arr){
+            var l = arr.length;
+            var preIndex, current;
+            for(var i = 1; i < l; i++) {
+                 preIndex = i - 1;
+                 current = arr[i];
+                while(preIndex >= 0 && arr[preIndex] > current){
+                    arr[preIndex + 1] = arr[preIndex];
+                    preIndex --;
+                }
+                arr[preIndex+1] = current;
+            }
+            return arr;
+        }
+    </script>
 </body>
 </html>
