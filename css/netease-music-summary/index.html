@@ -14,7 +14,16 @@
     <div class="music-btn off"></div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">slide-1</div>
+            <div class="swiper-slide">
+                <div class="m-page-14">
+                        <div class="manwrap">
+                            <div class="shoubi"></div>
+                            <div class="man"></div>
+                            <div class="tou"></div>
+                        </div>
+                      
+                </div>       
+            </div>
             <div class="swiper-slide">
                 <div class="view special">
                     <!-- 荡秋千 -->
@@ -37,13 +46,27 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">slide-3</div>
+            <div class="swiper-slide">
+                <div class="view favourite">
+                    <div class="id18_juian j-juanAni2 z-juanAni2"></div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <script>
         const musicBtn = document.querySelector('.music-btn');
         const bgm = document.getElementById('bgm');
+        // const paras = document.querySelector('.paras');
+        const id18_juian = document.querySelector('.id18_juian');
+        setInterval(() => {
+            id18_juian.classList.remove('z-juanAni2');
+            setTimeout(() => {
+                
+            id18_juian.classList.add('z-juanAni2');
+            }, 300);
+            
+        }, 3000)
         let defaultMusicPlay = true;
         musicBtn.addEventListener('click',() => {
             if(defaultMusicPlay){
