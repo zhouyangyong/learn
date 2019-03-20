@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header,footer{
+            text-align: center;
+            width: 100%;
+            background-color: #aaa;
+        }
+        .content{
+            padding: 0 200px;
+            /* width: 100%; */
+        }
+        .text{
+            text-align: center;
+            font-size: 40px;
+            line-height: 200px;
+        }
+        .main{
+            float: left;
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+            margin-left: -100%;
+            position: relative; /*想对于元素本身定位*/
+            left: -200px;
+        }
+        .right{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            float: left;
+            margin-left: -200px;
+            position: relative;
+            left: 200px;
+        }
+        /* .clearFix{
+            float: left;
+            
+        } */
+    </style>
+</head>
+<body>
+    <!-- 提高用户体验，让我们主要内容先加载出来 -->
+    <header>圣杯布局</header>
+    <div class="content clearFix">
+        <div class="main text">main</div>
+        <div class="left text">left</div>
+        <div class="right text">right</div>
+        <!-- 清除浮动 -->
+        <div style="clear: left;"></div>
+    </div>
+    <footer>footer</footer>
+</body>
+</html>

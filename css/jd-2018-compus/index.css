@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 37.5px;
+}
+body{
+    font-size: 0.18rem;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;    
+} 
+
+/* p1 */
+.p1{
+    background-color: red;
+}
+
+.light,.p1 .slogon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.p1 .light{
+    width: 7.7321rem;
+    height: 19rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/p1-light_7df180.png) no-repeat;    
+    background-size: 100% auto;
+    margin-left: -3.86rem;
+    margin-top: -5.2rem;
+}
+
+.p1.swiper-slide-active .slogon{
+    animation: fadeInup .5s .3s both;
+}
+@keyframes fadeInup{
+    0%{
+        opacity: 0;
+        transform: translate3d(0,100%,0);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.p1 .slogon{
+    width: 2.74rem;
+    height: 2.44rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.text_2b7b0a.png);
+    background-position: -5.38rem 0;
+    margin-left: -1.37rem;
+    margin-top: -1.68rem;
+    background-size: 51.58rem 2.44rem;
+    text-indent: -133.32rem;
+}
+
+
+/* p2 */
+.bg{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/bg-scene-03_84f0d4.jpg) no-repeat;
+    background-size: 100% auto;
+}
+.p2 .light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.p2 .light {
+    margin-left: -4.06667rem;
+    margin-top: -6.66667rem;
+    width: 8.13333rem;
+    height: 13.36rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/light-scene-03_10d833.png) no-repeat;
+    background-size: 100% auto;
+}
+.p2 .dog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.p2 .dog {
+    margin-left: -.8rem;
+    margin-top: -4.53333rem;
+    width: 4.56rem;
+    height: 8.73333rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/dog-scene-03_d49ae4.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.p2 .text-top {
+    background-size: 32.49333rem 2.26667rem;
+}
+
+.p2 .text-top {
+    width: 3.33333rem;
+    height: 2.25333rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.scene_c9deac.png);
+    background-position: -9.25333rem 0;
+}
+.p2 .text-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1.2rem;
+    margin-top: 1.6rem;
+}
+.p2 .text {
+    text-indent: -133.32rem;
+}
+
+.p2 .text-bottom {
+    width: 1.92rem;
+    height: .56rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.scene_c9deac.png);
+    background-position: -7.30667rem 0;
+}
+.p2 .text-bottom {
+    -webkit-background-size: 32.49333rem 2.26667rem;
+    background-size: 32.49333rem 2.26667rem;
+}
+.p2 .text-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 1.2rem;
+    margin-bottom: 1.33333rem;
+}
+
+.p2 .num {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 1.06667rem;
+    margin-bottom: 2rem;
+}
+.p2 .num {
+    color: #fff;
+    font-size: 2.66667rem;
+    line-height: 1;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>快速排序</title>
+</head>
+<body>
+<script>
+function quickSort2(ary, comparator = (a, b) => a - b) {
+  return partition(ary, comparator)
+}
+function partition(ary, comparator, start = 0, end = ary.length - 1, ) {
+  if (start >= end) {
+    return
+  }
+
+  var pivotIndex = Math.floor(Math.random() * (end - start + 1) + start)
+  var pivot = ary[pivotIndex]
+
+  swap(ary, pivotIndex, end)
+
+  for (var i = start - 1, j = start; j < end; j++) {
+    if (comparator(ary[j], pivot) < 0) {
+      i++
+      swap(ary, i, j)
+    }
+  }
+
+  swap(ary, i + 1, end)
+  partition(ary, comparator, start, i)
+  partition(ary, comparator, i + 2, end)
+  return ary
+}
+
+</script>
+</body>
+</html>
