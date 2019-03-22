@@ -12,8 +12,7 @@
         <circle class="drag-button" r="12" cy="247" cx="100" 
         stroke-width="1" stroke="#000" fill="#fff"/>
     </svg>
-    <audio src="http://117.41.241.16/amobile.music.tc.qq.com/C400000kirTQ3OeqNJ.m4a?guid=2088829824&vkey=915EE78F542FAEAD95FA1976148C20DF739C43AFDC0BB2D10845FCBB656247692520CD5467B4089D87FE856A64581FA79BDCF4ADCEB630EA&uin=0&fromtag=66"
-        id="music" autoplay="true">
+    <audio src="./金玟岐 - 岁月神偷 (Demo).mp3" id="music" autoplay="true" loop="true">
     </audio>
 
 
@@ -25,11 +24,11 @@
         music.volume = 0.1;
         // 整段路径的长度
         let pathTotleLength = parseInt(volumnPath.getTotalLength());
-        console.log(pathTotleLength);
+        // console.log(pathTotleLength);
         let points=[];
         // 第一个点的
         let startX = volumnPath.getPointAtLength(0).x;
-        console.log(startX);
+        // console.log(startX);
         for(let i = 0; i < pathTotleLength; i++) {
             // 第几个点
             let p = volumnPath.getPointAtLength(i);
@@ -37,12 +36,12 @@
             // Math.round(p.x) - startX  唯一
             points[Math.round(p.x) - startX] = Math.round(p.y);
         }
-        console.log(points);
+        // console.log(points);
         function movePoint(event) {
-            console.log(event.clientX);
+            // console.log(event.clientX);
             // 圆环不动,但是鼠标拖着他动, clientX
             // 鼠标事件后的偏移量
-            // 便宜过后,圆环对应于path 上的新的一个点, points y 的值
+            // 偏移过后,圆环对应于path 上的新的一个点, points y 的值
             // 所在的新的位置
             let diffX = event.clientX - Math.round(dragButtonPos.left + 12);
             diffX < 0 && (diffX = 0);
@@ -58,7 +57,7 @@
 
         // 获取某个元素相对于视窗的坐标集合
         let dragButtonPos = dragButton.getBoundingClientRect();
-        console.log(dragButtonPos);
+        // console.log(dragButtonPos);
         dragButton.addEventListener('mousedown', function(event) {
             document.addEventListener('mousemove', movePoint);
         })
