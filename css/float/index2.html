@@ -18,6 +18,8 @@
         .content{
             padding: 0 200px;
             /* width: 100%; */
+            overflow: hidden;
+            /* display: table; */
         }
         .text{
             text-align: center;
@@ -52,6 +54,11 @@
             float: left;
             
         } */
+        /* .clearFix::after{
+            content: "";
+            clear: both;
+            display: block;
+        } */
     </style>
 </head>
 <body>
@@ -62,7 +69,7 @@
         <div class="left text">left</div>
         <div class="right text">right</div>
         <!-- 清除浮动 -->
-        <div style="clear: left;"></div>
+        <!-- <div style="clear: left;"></div> -->
     </div>
     <footer>footer</footer>
 </body>

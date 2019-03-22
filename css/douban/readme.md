@@ -11,7 +11,7 @@
   文字line-height padding margin
   5. 文字截断
   tmall 商铺信息是由商家填的，他的高度，不被限制
-  display: -wenkut-box; 新的盒子模型，像flex 来划分父元素的空间。
+  display: -webkit-box; 新的盒子模型，像flex 来划分父元素的空间。
   overflow: hidden;
   -webkit-line-clamp 行数
   -webkit-box-orient: vertical 垂直方向
