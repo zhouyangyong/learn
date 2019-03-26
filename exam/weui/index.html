@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>weui+js</title>
+    <link href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input name" type="text" placeholder="请输入用户名" value="">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">qq</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input qq" type="number" pattern="[0-9]*" placeholder="请输入qq号" value="">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_vcode">
+            <div class="weui-cell__hd">
+                <label class="weui-label">手机号</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input phone" type="tel" placeholder="请输入手机号" value="">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="" class="weui-label">日期</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input date" type="date" value="">
+            </div>
+        </div>
+        <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary submit" href="javascript:" id="showTooltips ">提交</a>
+        </div>
+        <table class="user-info">
+            <tr>
+                <th>姓名</th>
+                <th>qq</th>
+                <th>手机号</th>
+                <th>生日</th>
+            </tr>
+            <!-- <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr> -->
+        </table>
+    </div>
+    <script>
+        const submit = document.querySelector('.submit');
+        const userInfo = document.querySelector('.user-info');
+
+        submit.addEventListener('click', function () {
+            const name = document.querySelector('.name').value;
+            const qq = document.querySelector('.qq').value;
+            const phone = document.querySelector('.phone').value;
+            const date = document.querySelector('.date').value;
+            let msg = {
+                'name': name,
+                'qq': qq,
+                'phone': phone,
+                'date': date
+            }
+            let info_tr = document.createElement('tr');
+            userInfo.appendChild(info_tr);
+            for (let i in msg) {
+                let info_td = document.createElement('td');
+                info_td.innerHTML = msg[i];
+                info_tr.appendChild(info_td);
+            }
+        })
+
+    </script>
+</body>
+
+</html>
