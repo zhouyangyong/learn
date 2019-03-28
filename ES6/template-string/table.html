@@ -43,16 +43,20 @@
         //     <td>韩梅梅</td>
         //     <td>18</td>
         // </tr >
-        const str = `
-        <tr>
-            <td>${person[0].name}</td>
-            <td>${person[0].age}</td>
-        </tr>
-        <tr>
-            <td>${person[1].name}</td>
-            <td>${person[1].age}</td>
-        </tr>`;
-        tbody.innerHTML = str;
+        // const str = `
+        // <tr>
+        //     <td>${person.name}</td>
+        //     <td>${person.age}</td>
+        // </tr>`;
+        let htmlString = people.map(function(people) {
+            return `
+                <tr>
+                    <td>${people.name}</td>
+                    <td>${people.age}</td>
+                </tr>`;
+        });
+        htmlString = htmlString.join('');
+        tbody.innerHTML = htmlString;
 
         // join 数组拼接成的字符串
         // const arr = ['ecut', 'ecit'];
