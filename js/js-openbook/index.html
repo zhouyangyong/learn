@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="book p3d">
+        <div class="book-cover p3d">
+            <div class="page back flip"></div>
+            <div class="page front p3d">
+                <div class="shadow size"></div>
+                <div class="dino"></div>
+            </div>
+        </div>
+        <div class="front-cover p3d">
+            <div class="page front flip p3d">
+                <p>张韶涵（Angela
+                    Chang），1982年1月19日出生于中国台湾省桃园县，中国台湾女歌手、演员，毕业于加拿大温斯顿爵士邱吉尔中等学校。2001年张韶涵签约福茂唱片而后主演偶像剧《MVP情人》；正式进入娱乐圈
+                    。2003年主演偶像剧《海豚湾恋人》走红。2006年凭借《爱杀17》一饰两角入围金钟奖戏剧节目最佳女主角奖；同年推出专辑《潘朵拉》。2007年主演的电视剧《公主小妹》获得湖南卫视2008年年度冠军收视。</p>
+            </div>
+            <div class="page back"></div>
+        </div>
+    </div>
+    <script>
+        (function (window, document) {
+            var prefixes = ['webkit', 'moz', 'ms', 'o', ''],
+                book = document.querySelectorAll('.book')[0],
+                page = document.querySelectorAll('.front-cover')[0],
+                dino = document.querySelectorAll('.dino')[0],
+                shadow = document.querySelectorAll('.shadow')[0],
+                hold = false,
+                // 获取当前窗口的宽度的一半
+                centerPoint = window.innerWidth / 2;
+            pageSize = 300;
+            clamp = function (val, min, max) {
+                return Math.max(min, Math.min(val, max));
+            };
+            // 按下鼠标时候执行的事件
+            page.onmousedown = function () {
+                hold = true;
+            };
+            // 放开鼠标时候执行的事件
+            window.onmouseup = function () {
+                if (hold) {
+                    hold = false;
+                }
+            };
+            // 在窗口被调整大小的时候执行的事件
+            window.onresize = function () {
+                // console.log(window.innerWidth);
+                centerPoint = window.innerWidth / 2;
+            }
+            // 鼠标移动后执行的事件
+            window.onmousemove = function (evt) {
+                if (!hold) {
+                    return;
+                }
+                // console.log(evt.pageX);
+                var angle = clamp((centerPoint - evt.pageX + pageSize) / pageSize * -90, -180, 0),
+                    i, j;
+                for (i = 0, j = prefixes.length; i < j; i++) {
+                    book.style[prefixes[i] + 'Transform'] = 'rotateX(' + (60 + angle / 8) + 'deg)';
+                    page.style[prefixes[i] + 'Transform'] = 'rotateY(' + angle + 'deg)';
+                    dino.style[prefixes[i] + 'Transform'] = 'rotateX(' + (angle / 3) + 'deg)';
+                    shadow.style[prefixes[i] + 'Transform'] = 'translateZ(1px) skewX(' + (angle / 8) + 'deg)';
+                }
+            }
+
+        })(window, document)
+    </script>
+</body>
+
+</html>
