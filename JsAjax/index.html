@@ -16,7 +16,10 @@
         } else {
             xhr = ActiveXObject("Microsoft.XMLHTTP");
         }
-        xhr.open("get", "http://127.0.0.1:54746/mock.json", true);
+        // 同步 
+        // 为什么会产生异步？ 因为js是单线程
+        // 回调地狱
+        xhr.open("get", "mock.json", true);
         xhr.setRequestHeader("Content-type", "application/x-www-fprm-urlencoded");
         xhr.send();
         // console.log(xhr.responseText);
@@ -27,6 +30,7 @@
                 console.log(666);
             }
         }
+        // console.log(666);
     </script>
 </body>
 
