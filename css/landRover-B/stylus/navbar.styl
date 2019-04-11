@@ -5,12 +5,15 @@
         align-items center
         overflow hidden
         position relative
+    .header
+        transition all .4s
     .header img
         width 98px
     .menu-icon
         display none
     .menu
         margin-left 103px
+        transition all .4s
         .item
             display inline-block
             font-size 18px
@@ -24,6 +27,18 @@
     .search-icon
         flex 1
         text-align right 
+    .search-form
+        position absolute
+        transform translateY(-120px)
+        opacity 0
+        translate all .5s
+    .searching .search-form
+        opacity 1
+        transform translateY(0px)
+    .searching
+        .header, .menu, .menu-icon
+            transform translateY(80px)
+            opacity 0
 
 @media only screen and (max-width:767px)
     .ui.navbar
