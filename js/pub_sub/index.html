@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html, body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // listener 收听者es callback   发布者document.body
+        // 注册事件 事件回调执行函数
+        // document.body.addEventListener('click', function() {
+        //     alert('111');
+        // }, false);
+        // document.body.addEventListener('click', function() {
+        //     alert('222');
+        // }, false);
+        // document.body.addEventListener('click', function() {
+        //     alert('333');
+        // }, false);
+
+        let yq = { name:'叶呆瓜', yz: 99}; // 发布者
+        yq.peopleList = []; //存储订阅者的地方
+        // listen 发布者和订阅者建立关系
+        yq.listen = function(fn) {
+            this.peopleList.push(fn);
+        }
+        yq.trigger = function() {
+            for (var i = 0, foo; foo = this.peopleList[i++];) {
+                foo.call(this, '...');
+            }
+        }
+
+        yq.listen(function(msg) {
+            console.log(`想听${this.name}${msg}唱歌`);
+        })
+        yq.listen(function(msg) {
+            console.log(`想听${this.name}${msg}跳舞`);
+        })
+        yq.listen(function(msg) {
+            console.log(`${this.name}${msg}女装大佬`);
+        })
+        console.log(yq.peopleList.length);
+        // 先形成他们之间的关系 订阅者?
+
+        setTimeout(() => {
+            yq.trigger();
+        }, 3000);
+
+    </script>
+</body>
+</html>
