@@ -159,43 +159,43 @@
           <li class="comment-item">
             <div class="comment-item__sort">
               <span>全部</span>
-              <span class="comment-item__num">66</span>
+              <span class="comment-item__num total">66</span>
             </div>
           </li>
           <li class="comment-item">
             <div class="comment-item__sort">
               <span>好评</span>
-              <span class="comment-item__num">6666</span>
+              <span class="comment-item__num good">6666</span>
             </div>
           </li>
           <li class="comment-item">
             <div class="comment-item__sort">
               <span>差评</span>
-              <span class="comment-item__num">66</span>
+              <span class="comment-item__num bad">66</span>
             </div>
           </li>
           <li class="comment-item">
             <div class="comment-item__sort">
               <span>购票</span>
-              <span class="comment-item__num">556</span>
+              <span class="comment-item__num bought">556</span>
             </div>
           </li>
           <li class="comment-item">
             <div class="comment-item__sort">
               <span>点映</span>
-              <span class="comment-item__num">1553</span>
+              <span class="comment-item__num dy">1553</span>
             </div>
           </li>
           <li class="comment-item">
             <div class="comment-item__sort">
               <span>认证作者</span>
-              <span class="comment-item__num">3493</span>
+              <span class="comment-item__num author">3493</span>
             </div>
           </li>
           <li class="comment-item">
             <div class="comment-item__sort">
               <span>同城</span>
-              <span class="comment-item__num">65</span>
+              <span class="comment-item__num sameCity">65</span>
             </div>
           </li>
         </ul>
@@ -205,7 +205,7 @@
     <section class="section-seperate section-expander">
       <p class="section-til">精选</p>
       <ul class="chosen-comment" id="chosen-comment">
-        <li class="chosen-comment__item">
+        <!-- <li class="chosen-comment__item">
           <div class="item-avatal">
             <img src="./20140923094045_BNYji.thumb.700_0.jpg" alt="">
           </div>
@@ -236,7 +236,7 @@
               </div>
             </div>
           </div>
-        </li>
+        </li> -->
       </ul>
     </section>
 
@@ -268,10 +268,14 @@
           $('.movie-detail .date').html(res.data.date)
           $('.text-expander__content p').html(res.data.desc)
           celebrity(res.data.person)
-          // 评论
           booking(res.data.booking)
           // 剧照
           photo(res.data.pictures)
+          // 评论
+          comment(res.data.commentNum)
+          $('.comment-item .total').html(res.data.commentTotal);
+          // 精选
+          chosenComment(res.data.comment)
         }
       })
       function star(e) {
@@ -340,6 +344,54 @@
           </a>
         </li>`)
         }
+      }
+      function chosenComment(array) {
+        for(let m of array) {
+          $('.chosen-comment').append(`
+          <li class="chosen-comment__item">
+          <div class="item-avatal">
+            <img src="${m.avatal}" alt="">
+          </div>
+          <div class="item-detail">
+            <div class="item-detail__hd">
+              <div>
+                <span class="nick-name">${m.nickName}</span>
+                <span class="lever">
+                  <img src="${m.level}" alt="">
+                </span>
+              </div>
+              <p class="item-score__desc">给这部电影打了<span>${m.grade}</span>分</p>
+            </div>
+            <div class="item-detail__content">
+              <p>${m.detail}</p>
+            </div>
+            <div class="item-detail__footer">
+              <span class="item-detail__time">${m.date}</span>
+              <div class="pull-right">
+                <a href="#" class="link comment-like">
+                  <i class="icon icon-approve"></i>
+                  <span>${m.like}</span>
+                </a>
+                <a href="#" class="link comment-reply">
+                  <i class="icon icon-comment"></i>
+                  <span>${m.reply}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+          `)
+        }
+      }
+
+      //评论
+      function comment(e) {
+        $('.comment-item .good').html(e.good);
+        $('.comment-item .bad').html(e.bad);
+        $('.comment-item .bought').html(e.bought);
+        $('.comment-item .dy').html(e.dy);
+        $('.comment-item .author').html(e.author);
+        $('.comment-item .sameCity').html(e.sameCity);
       }
     })()
   </script>
