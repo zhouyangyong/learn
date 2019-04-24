@@ -5,7 +5,7 @@
     "pages/mine/index"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#48a8fd",
     "navigationBarTitleText": "旅梦开发团",
     "navigationBarTextStyle": "black"

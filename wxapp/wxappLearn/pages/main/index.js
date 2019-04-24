@@ -5,23 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
+    city: '南昌',
     imgUrls: [
       'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
       'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
       'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
     ],
-    indicatorDots: true,
-    indicatorColor: "#eee",
-    autoplay: true,
-    interval: 2000,
-    duration: 1000
+    items:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(1);
+    let that = this;
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5ca45811c4e9a575b66b62c0/example/movie',
+      success: function(res) {
+        // console.log(res);
+        that.setData({
+          items: res.data.data.movieList
+        })
+      }
+    })
   },
 
   /**
@@ -57,6 +63,10 @@ Page({
    */
   onPullDownRefresh: function () {
     // console.log(6);
+    console.log(1234);
+    setTimeout(() => {
+      wx.stopPullDownRefresh()
+    },2000)
   },
 
   /**
@@ -64,6 +74,7 @@ Page({
    */
   onReachBottom: function () {
     // console.log(7);
+    console.log(6666);
   },
 
   /**
