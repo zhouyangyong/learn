@@ -17,7 +17,7 @@ exports.main = async (event, context) => {
     })
     .get();
   // 如果有用户，则更新基本用户信息
-  if(checkUser.data.length > 0) {
+  if (checkUser.data.length > 0) {
     await db.collection('user').doc(checkUser.data[0])
       .update({
         data: {
@@ -28,12 +28,14 @@ exports.main = async (event, context) => {
       })
   } else {
     const insertResult = await db.collection('user').add({
-      avatarUrl: event.avatarUrl,
-      nickName: event.nickName,
-      sex: event.sex,
-      name: '',
-      openId: event.userInfo.openId,
-      createTime: new Date()
+      data: {
+        avatarUrl: event.avatarUrl,
+        nickName: event.nickName,
+        sex: event.sex,
+        name: '',
+        openId: event.userInfo.openId,
+        createTime: new Date()
+      }
     })
   }
 }

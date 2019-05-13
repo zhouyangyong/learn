@@ -20,7 +20,7 @@ exports.main = async (event, context) => {
     })
     .get();
   return {
-    groupNum: groupNum.data.length,
-    storeUser: storeUser.data[0]
+      groupNum: groupNum.data.length,
+      storeUser: storeUser.data[0]
   }
 }
