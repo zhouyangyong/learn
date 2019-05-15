@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "星巴克用星说",
+    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

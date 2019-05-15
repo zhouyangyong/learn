@@ -1,13 +1,57 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!--pages/index/index.wxml-->
+<view class="section">
+    <swiper class="swiper" 
+    indicator-dots="true" 
+    indicator-color="rgba(221, 221, 221, 1)"
+    indicator-active-color="rgba(0, 255, 0, 1)"
+    interval="5000"
+    duration="500"
+    autoplay="true"
+    circular="true"
+    >
+        <block wx:for="{{ imgUrl }}" wx:key="{{ index }}">
+            <swiper-item>
+                <image src="{{ item }}" class="item-image" bindtap="toInfo" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="content">
+        <view class="header">
+            <view class="welfare">
+                <view class="hongbao_box">
+                    <image src="../../images/collect/hongbao.png" class="hongbaoIcon" />
+                </view>
+                <text class="welfareText">5元玩味冰调福利</text>
+            </view>
+            <view class="collect">
+                <text class="collectText">收藏</text>
+                <view class="collect_box">
+                    <image src="../../images/collect/collect.png" class="collectIcon" />
+                </view>
+            </view>
+        </view>
+        <view class="list">
+            <block wx:for="{{ coffeeList_love }}" wx:key="{{ index }}">
+                <text class="listText">用咖啡说爱你，即刻表心意</text>
+                <view class="coffee-love">
+                    <image src="{{ item.img }}" class="coffee-love-img item-img" />
+                    <text class="coffee-love-text item-name">{{ item.name }}</text>
+                </view>
+            </block>
+            <block wx:for="{{ coffeeList_blessing }}" wx:key="{{ index }}">
+                <text class="listText">咖啡+祝福，拿走不谢</text>
+                <view class="coffee-blessing">
+                    <image src="{{ item.img }}" class="coffee-blessing-img item-img" />
+                    <text class="coffee-blessing-text item-name">{{ item.name }}</text>
+                </view>
+            </block>
+            <block wx:for="{{ coffeeList_grateful }}" wx:key="{{ index }}">
+                <text class="listText">感恩有你，来杯咖啡</text>
+                <view class="coffee-grateful">
+                    <image src="{{ item.img }}" class="coffee-grateful-img item-img" />
+                    <text class="coffee-grateful-text item-name">{{ item.name }}</text>
+                </view>
+            </block>
+        </view>
+    </view>
 </view>

@@ -1,38 +1,25 @@
 // pages/index/index.js
+const app = getApp();
+const GameManager = require('./game_manager');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrl: [
-      "../../images/swiper/1.jpg",
-      "../../images/swiper/2.jpg",
-      "../../images/swiper/3.jpg",
-      "../../images/swiper/4.jpg",
-      "../../images/swiper/5.jpg",
-    ],
-    coffeeList_love: [
-      { img: '', name: '我要对你说'},
-      { img: '', name: 'DIY一份小心意'},
-    ],
-    coffeeList_blessing: [
-      { img: '', name: '玩味冰调'},
-      { img: '', name: '送你个大红包'},
-    ],
-    coffeeList_grateful: [
-      { img: '', name: '卖个萌啊'},
-      { img: '', name: '老铁加油'},
-      { img: '', name: '咖啡有你'},
-      { img: '', name: '生日快乐'},
-    ]
+    grids: []
   },
-
+  gameManager: null,
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.gameManager = new GameManager(4);
+    const grids = this.gameManager.setup();
+    this.setData({
+      grids
+    })
   },
 
   /**
