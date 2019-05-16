@@ -31,22 +31,22 @@
             </view>
         </view>
         <view class="list">
+            <text class="listText">用咖啡说爱你，即刻表心意</text>
             <block wx:for="{{ coffeeList_love }}" wx:key="{{ index }}">
-                <text class="listText">用咖啡说爱你，即刻表心意</text>
                 <view class="coffee-love">
                     <image src="{{ item.img }}" class="coffee-love-img item-img" />
                     <text class="coffee-love-text item-name">{{ item.name }}</text>
                 </view>
             </block>
+            <text class="listText">咖啡+祝福，拿走不谢</text>
             <block wx:for="{{ coffeeList_blessing }}" wx:key="{{ index }}">
-                <text class="listText">咖啡+祝福，拿走不谢</text>
                 <view class="coffee-blessing">
                     <image src="{{ item.img }}" class="coffee-blessing-img item-img" />
                     <text class="coffee-blessing-text item-name">{{ item.name }}</text>
                 </view>
             </block>
+            <text class="listText">感恩有你，来杯咖啡</text>
             <block wx:for="{{ coffeeList_grateful }}" wx:key="{{ index }}">
-                <text class="listText">感恩有你，来杯咖啡</text>
                 <view class="coffee-grateful">
                     <image src="{{ item.img }}" class="coffee-grateful-img item-img" />
                     <text class="coffee-grateful-text item-name">{{ item.name }}</text>
