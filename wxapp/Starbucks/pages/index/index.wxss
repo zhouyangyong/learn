@@ -22,6 +22,7 @@
     width: 100%;
     padding: 60rpx 40rpx 60rpx 40rpx;
     background-color: #f9f9f9;
+    box-sizing: border-box;
 }
 
 .welfare {
@@ -61,18 +62,16 @@
 .collect {
     width: 200rpx;
     height: 100rpx;
-    margin-left: -100rpx;
     text-align: center;
-    /* display: inline-block; */
-    background-color: red;
     float: right;
     overflow: hidden;
+    
 }
 
 .collectText {
     font-size: 30rpx;
     color: green;
-    line-height: 100rpx;
+    vertical-align: middle;
 }
 
 .collect_box {
@@ -83,6 +82,7 @@
     position: relative;
     display: inline-block;
     margin-left: 20rpx;
+    vertical-align: middle;
 }
 
 .collectIcon {

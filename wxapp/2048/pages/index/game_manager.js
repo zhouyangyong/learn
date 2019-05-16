@@ -29,6 +29,35 @@ GameManager.prototype = {
             // 插入
             this.grid.insertTile(tile);
         }
+    },
+    findFatherTail: function(cell, vertor) {
+
+    },
+    getVertor: function (direction) {
+        const map = {
+            0: {
+                x: 0,
+                y: -1
+            },
+            1: {
+                x: 1,
+                y: 0
+            },
+            2: {
+                x: 0,
+                y: 1
+            },
+            3: {
+                x: -1,
+                y: 0
+            }
+        }
+        return map[direction];
+    },
+    move: function (direction) {
+        const vertor = this.getVertor(direction);
+        console.log(direction, vertor);
+        const position = this.findFatherTail();
     }
 }
 
