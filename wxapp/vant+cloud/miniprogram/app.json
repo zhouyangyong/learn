@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/group/group",
-    "pages/personal/personal"
+    "pages/personal/personal",
+    "pages/login/login"
   ],
   "window": {
     "backgroundColor": "#F2F2F2",
@@ -36,8 +37,8 @@
     "selectedColor": "#3585F9"
   },
   "usingComponents": {
-    "van-icon": "./pages/dist/icon/index",
     "van-button": "./pages/dist/button/index",
+    "van-icon": "./pages/dist/icon/index",
     "van-dialog": "./pages/dist/dialog/index",
     "van-field": "./pages/dist/field/index",
     "van-notify": "./pages/dist/notify/index"

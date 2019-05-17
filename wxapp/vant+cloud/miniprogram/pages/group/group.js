@@ -26,8 +26,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let self = this;
-    wx.showNavigationBarLoading();
+    let self = this
+    wx.showNavigationBarLoading()
     wx.cloud.callFunction({
       name: 'getGroup',
       data: {},
@@ -37,12 +37,12 @@ Page({
         })
       },
       fail(error) {
-        console.log(error);
+        console.log(error)
       },
       complete() {
         wx.hideNavigationBarLoading()
       }
-    })
+    })  
   },
 
   /**

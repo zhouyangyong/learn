@@ -1,40 +1,39 @@
 // miniprogram/pages/index/index.js
-import Notify from '../dist/notify/notify';
+import Notify from '../dist/notify/notify'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    newGroupModel: false,
-    groupName: ''
+    groupName: '',
+    newGroupModal: false
   },
-  showNewGroupModel() {
+  showNewGroupModal() {
     this.setData({
-      newGroupModel: true
+      newGroupModal: true
     })
   },
   onGroupNameChange(event) {
     this.setData({
       groupName: event.detail
     })
-    console.log(event.detail)
   },
-  closeDiolog() {
+  colseDialog() {
     this.setData({
-      newGroupModel: false
+      newGroupModal: false
     })
   },
   creatGroup() {
-    let self = this;
-    if(self.data.groupName === '') {
+    let self = this
+    if (self.data.groupName === '') {
       Notify({
         text: '起个名字吧',
         duration: 1500,
         selector: '#notify-selector',
         backgroundColor: '#dc3545'
       });
-      self.selectComponent('#new-group-model').stopLoading();
+      self.selectComponent('#new-group-modal').stopLoading()
       return
     } else {
       wx.cloud.callFunction({
@@ -44,7 +43,7 @@ Page({
         },
         success(res) {
           self.setData({
-            newGroupModel: false,
+            newGroupModal: false,
             groupName: ''
           })
           Notify({
@@ -57,19 +56,20 @@ Page({
             wx.switchTab({
               url: `/pages/group/group`
             })
-          }, 1500)
+          },1500)
         },
         fail(error) {
-          console.log(error);
+          console.log(error)
         }
       })
     }
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**

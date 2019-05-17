@@ -1,24 +1,22 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
-const env = 'zhouyangyong-7ebg9';
+const env = 'zhouyangyong-7ebg9'
 
 cloud.init()
-
-const db = cloud.database({ env });
-
+const db = cloud.database({ env })
 // 云函数入口函数
 exports.main = async (event, context) => {
-  const userInfo = event.userInfo;
+  const userInfo = event.userInfo
 
-  // 先查询有无用户的openId
+  // 先查询有无该用户openId
   const checkUser = await db.collection('user')
     .where({
       openId: userInfo.openId
     })
-    .get();
-  // 如果有用户，则更新基本用户信息
+    .get()
+  // 如果有该用户，则更新基本用户信息
   if (checkUser.data.length > 0) {
-    await db.collection('user').doc(checkUser.data[0])
+    await db.collection('user').doc(checkUser.data[0]._id)
       .update({
         data: {
           avatarUrl: event.avatarUrl,
@@ -27,6 +25,7 @@ exports.main = async (event, context) => {
         }
       })
   } else {
+    // 插入
     const insertResult = await db.collection('user').add({
       data: {
         avatarUrl: event.avatarUrl,

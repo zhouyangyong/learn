@@ -1,15 +1,14 @@
 // 云函数入口文件
-const cloud = require('wx-server-sdk');
-const env = 'zhouyangyong-7ebg9';
+const cloud = require('wx-server-sdk')
+const env = 'zhouyangyong-7ebg9'
 
-cloud.init();
-
+cloud.init()
 // 获取服务器的句柄
-const db = cloud.database({ env });
+const db = cloud.database({ env })
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  const userInfo = event.userInfo;
+  const userInfo = event.userInfo
   return await db.collection('group').add({
     data: {
       name: event.groupName,
@@ -20,7 +19,7 @@ exports.main = async (event, context) => {
     }
   })
   .then(res => {
-    return db.collection('userGroup').add({
+    return db.collection('user-group').add({
       data: {
         groupId: res._id,
         userId: userInfo.openId,
