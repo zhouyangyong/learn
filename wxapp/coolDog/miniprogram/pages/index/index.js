@@ -9,32 +9,38 @@ Page({
       {
         imgUrl: '../../images/dog.png',
         name: '绿色',
-        singer: '陈雪凝'
+        singer: '陈雪凝',
+        playNum: '10万'
       },
       {
         imgUrl: '../../images/dog.png',
         name: '绿色',
-        singer: '陈雪凝'
+        singer: '陈雪凝',
+        playNum: '10万'
       },
       {
         imgUrl: '../../images/dog.png',
         name: '绿色',
-        singer: '陈雪凝'
+        singer: '陈雪凝',
+        playNum: '10万'
       },
       {
         imgUrl: '../../images/dog.png',
         name: '绿色',
-        singer: '陈雪凝'
+        singer: '陈雪凝',
+        playNum: '10万'
       },
       {
         imgUrl: '../../images/dog.png',
         name: '绿色',
-        singer: '陈雪凝'
+        singer: '陈雪凝',
+        playNum: '10万'
       },
       {
         imgUrl: '../../images/dog.png',
         name: '绿色',
-        singer: '陈雪凝'
+        singer: '陈雪凝',
+        playNum: '10万'
       }
     ]
   },

@@ -85,15 +85,16 @@
 }
 
 .cpt {
-    width: 200rpx;
-    height: 200rpx;
+    width: 230rpx;
+    height: 340rpx;
     /* flex: 1; */
 }
 
 .song-image {
-    width: 50rpx;
-    height: 50rpx;
+    width: 230rpx;
+    height: 230rpx;
     display: block;
+    z-index: 1;
 }
 
 .songListName {
@@ -102,6 +103,41 @@
 }
 
 .songListSinger {
-    font-size: 18rpx;
+    font-size: 22rpx;
     color: #aaaaaa;
+}
+
+.new-song {
+    padding-top: 40rpx;
+}
+
+.popSongImage {
+    position: relative;
+}
+
+.playNum {
+    position: absolute;
+    padding-top: 180rpx;
+    padding-left: 10rpx;
+    display: inline-block;
+    text-align: center;
+}
+
+.earPhoneIcon {
+    width: 30rpx;
+    height: 30rpx;
+    display: inline-block;
+    padding-top: 10rpx;
+    /* vertical-align: middle; */
+    z-index: 10;
+}
+
+.num {
+    font-size: 22rpx;
+    color: #ffffff;
+    vertical-align: middle;
+    padding-bottom: 5rpx;
+    padding-left: 10rpx;
+    display: inline-block;
+    z-index: 10;
 }

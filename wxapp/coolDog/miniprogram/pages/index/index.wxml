@@ -27,5 +27,50 @@
                 </block>
             </view>
         </view>
+
+        <!-- 新歌首发 -->
+        <view class="new-song">
+            <view class="new-song-title">
+                <text class="title">新歌首发</text>
+                <view class="more" bindtap="{{ goToMoreHotSong }}">
+                    <text class="more-text">更多</text>
+                    <view class="more-icon"></view>
+                </view>
+            </view>
+            <view class="itemContent">
+                <block wx:for="{{hotSongList}}" wx:key="item">
+                    <view class="newSongList cpt">
+                        <image class="song-image" src="{{item.imgUrl}}" />
+                        <text class="songListName">{{item.name}}</text>
+                        <text class="songListSinger">{{item.singer}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+
+        <!-- 热门歌单 -->
+        <view class="pop-song">
+            <view class="pop-song-title">
+                <text class="title">热门歌单</text>
+                <view class="more" bindtap="{{ goToMoreHotSong }}">
+                    <text class="more-text">更多</text>
+                    <view class="more-icon"></view>
+                </view>
+            </view>
+            <view class="itemContent">
+                <block wx:for="{{hotSongList}}" wx:key="item">
+                    <view class="popSongList cpt">
+                        <view class="popSongImage">
+                            <view class="playNum">
+                                <image class="earPhoneIcon" src="../../images/earPhone.png" />
+                                <text class="num">{{item.playNum}}</text>
+                            </view>
+                        </view>
+                            <image class="song-image" src="{{item.imgUrl}}" />
+                        <text class="songListName">{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
     </view>
 </view>
