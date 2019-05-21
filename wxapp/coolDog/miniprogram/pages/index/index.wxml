@@ -1,0 +1,28 @@
+<view class="page">
+    <view class="header">
+        <view class="headerItem">
+            <image class="search-icon" src="../../images/search.png" />
+            <input type="text" class="header-input" placeholder="请输入歌手或歌曲名" focus="{{focus}}" />
+        </view>
+    </view>
+    <view class="content">
+        <view class="hot-song">
+            <view class="hot-song-title">
+                <text class="title">热门歌曲</text>
+                <view class="more" bindtap="{{ goToMoreHotSong }}">
+                    <text class="more-text">更多</text>
+                    <view class="more-icon"></view>
+                </view>
+            </view>
+            <block wx:for="{{hotSongList}}" wx:key="item">
+                <view class="hotSongList cpt">
+                    <image class="song-image" src="{{item.imgUrl}}" />
+                    <text class="songListName">{{item.name}}</text>
+                    <text class="songListSinger">{{item.singer}}</text>
+                </view>
+
+            </block>
+              
+        </view>
+    </view>
+</view>
