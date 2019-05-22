@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="lists"></div>
+    <script>
+        // 扩展数组原型对象上的方法
+        Array.prototype.double = function () {
+            console.log(this);
+            return this.map(ele => ele * 2);
+        }
+        let arr = [1, 2, 3];
+        let newArr = arr.double();
+        // 返回原数组 扩大两倍    
+        console.log(newArr);
+
+        // 错误 分析
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject('err');
+            }, 1500);
+        })
+
+        promise
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                // 上报
+                console.log(err);
+            })
+            
+        try {
+            const lists = document.getElementById('list');
+            // lists === null
+            lists.style.width = '10px';
+
+        } catch (error) {
+            console.log(error);
+        }
+        console.log('正确的代码');
+    </script>
+</body>
+
+</html>

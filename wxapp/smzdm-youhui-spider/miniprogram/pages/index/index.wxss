@@ -1,0 +1,12 @@
+/* miniprogram/pages/index/index.wxss */
+.youhuiItem {
+    display: flex;
+  }
+  image{
+    /* flex-grow */
+    flex: 0 0 30%;
+  }
+  .price{
+    color: brown;
+  }
+  
