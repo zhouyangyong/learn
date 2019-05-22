@@ -24,9 +24,7 @@
       },
       {
         "pagePath": "pages/mine/mine",
-        "text": "我的",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "text": "我的"
       }
     ]
   },

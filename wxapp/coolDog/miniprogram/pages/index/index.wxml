@@ -27,7 +27,6 @@
                 </block>
             </view>
         </view>
-
         <!-- 新歌首发 -->
         <view class="new-song">
             <view class="new-song-title">
@@ -47,7 +46,6 @@
                 </block>
             </view>
         </view>
-
         <!-- 热门歌单 -->
         <view class="pop-song">
             <view class="pop-song-title">
@@ -66,8 +64,36 @@
                                 <text class="num">{{item.playNum}}</text>
                             </view>
                         </view>
-                            <image class="song-image" src="{{item.imgUrl}}" />
+                        <image class="song-image" src="{{item.imgUrl}}" />
                         <text class="songListName">{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <!-- 酷狗热歌榜 -->
+        <view class="coolDog-hot-song">
+            <view class="coolDog-song-title">
+                <text class="title">酷狗热歌榜</text>
+                <view class="more" bindtap="{{ goToMoreHotSong }}">
+                    <text class="more-text">更多</text>
+                    <view class="more-icon"></view>
+                </view>
+            </view>
+            <view class="listContent">
+                <block wx:for="{{coolDogHotSong}}" wx:key="{{coolDog}}">
+                    <view class="coolDogList">
+                        <image src="{{item.imgUrl}}" class="list-image" />
+                        <view class="list-info">
+                            <view class="list-title">
+                                <text class="list-title ">{{item.listName}}</text>                      
+                                <view class="list-more-icon more-icon"></view>
+                            </view>
+                            <block wx:for="{{item.songs}}" wx:for-item="songs" wx:key="coolDog">
+                                <view class="list-songs">
+                                    <text class="list-song">{{songs}}</text>
+                                </view>
+                            </block>
+                        </view>
                     </view>
                 </block>
             </view>

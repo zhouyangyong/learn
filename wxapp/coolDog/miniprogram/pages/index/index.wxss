@@ -10,6 +10,7 @@
     align-items: center;
     background-color: #ffffff;
     box-sizing: border-box;
+    z-index: 20;
 }
 
 .headerItem {
@@ -29,7 +30,7 @@
     width: 35rpx;
     height: 35rpx;
     margin-left: 200rpx;
-    z-index: 5;
+    z-index: 20;
 }
 
 .header-input {
@@ -94,6 +95,7 @@
     width: 230rpx;
     height: 230rpx;
     display: block;
+    border-radius: 8rpx;
     z-index: 1;
 }
 
@@ -140,4 +142,43 @@
     padding-left: 10rpx;
     display: inline-block;
     z-index: 10;
+}
+
+.listContent {
+    padding-top: 34rpx;
+}
+
+.coolDogList {
+    width: 100%;
+    height: 100%;
+    padding-top: 6rpx;
+    /* box-sizing: border-box; */
+}
+
+.list-image {
+    width: 230rpx;
+    height: 230rpx;
+    border-radius: 8rpx;
+}
+
+.list-info {
+    width: 350rpx;
+    /* height: 210rpx; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    float: right;
+    padding-top: 20rpx;
+    padding-bottom: 10rpx;
+    padding-right: 110rpx;
+    border-bottom: 1rpx solid #eeeeee;
+}
+
+.list-title {
+    font-size: 34rpx;
+}
+
+.list-song {
+    font-size: 28rpx;
+    color: #aaaaaa;
 }

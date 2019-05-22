@@ -42,6 +42,35 @@ Page({
         singer: '陈雪凝',
         playNum: '10万'
       }
+    ],
+    coolDogHotSong: [
+      {
+        imgUrl: '../../images/dog.png',
+        listName: '酷狗飙升榜',
+        songs: [
+            '李宇春、吴青峰 - 作为怪物',
+            '李宇春、吴青峰 - 作为怪物',
+            '李宇春、吴青峰 - 作为怪物'
+        ]
+      },
+      {
+        imgUrl: '../../images/dog.png',
+        listName: '酷狗飙升榜',
+        songs: [
+            '李宇春、吴青峰 - 作为怪物',
+            '李宇春、吴青峰 - 作为怪物',
+            '李宇春、吴青峰 - 作为怪物'
+        ]
+      },
+      {
+        imgUrl: '../../images/dog.png',
+        listName: '酷狗飙升榜',
+        songs: [
+            '李宇春、吴青峰 - 作为怪物',
+            '李宇春、吴青峰 - 作为怪物',
+            '李宇春、吴青峰 - 作为怪物'
+        ]
+      }
     ]
   },
 
