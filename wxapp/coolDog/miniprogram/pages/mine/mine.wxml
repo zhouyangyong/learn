@@ -1,2 +1,11 @@
-<!--miniprogram/pages/mine/mine.wxml-->
-<text>miniprogram/pages/mine/mine.wxml</text>
+<view class="page">
+        <!-- 用户信息 -->
+        <view class="header">
+            <view class="user">
+                <image class="user-avatar" src="../../images/dog.png" />
+                <text class="user-name">知名患者</text>
+            </view>
+            <image class="header-bg" src="../../images/dog.png" />
+        </view>
+        
+</view>
