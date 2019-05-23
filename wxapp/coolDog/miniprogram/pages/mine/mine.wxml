@@ -10,5 +10,6 @@
     <!-- 最近播放和收藏内容 -->
     <view class="content">
         <mineTab></mineTab>
+        <playAll></playAll>
     </view>
 </view>

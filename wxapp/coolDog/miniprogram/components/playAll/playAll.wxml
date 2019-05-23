@@ -1,0 +1,16 @@
+<view class="play">
+    <div class="play-content">
+        <!-- <view class="playAll">
+            <image class="playIcon" src="../../images/play.png" />
+            <text class="playTxt">全部播放</text>
+        </view>
+        <view class="playType">
+            <image class="playTypeIcon" src="../../images/order2.png" />
+            <text class="playTypeTxt">顺序播放</text>
+        </view> -->
+        <image class="playIcon" src="../../images/play.png" />
+        <text class="playTxt">全部播放</text>
+        <image class="playTypeIcon" src="../../images/order2.png" />
+        <text class="playTypeTxt">顺序播放</text>
+    </div>
+</view>

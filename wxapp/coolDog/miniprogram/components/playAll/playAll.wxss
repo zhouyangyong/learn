@@ -1,0 +1,43 @@
+.play {
+    width: 100%;
+    height: 100%;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.play-content {
+    height: 70rpx;   
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.playIcon {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+}
+
+.playTxt {
+    font-size: 30rpx;
+    position: absolute;
+    left: 60rpx;
+}
+
+.playTypeIcon {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    right: 120rpx;
+}
+
+.playTypeTxt {
+    font-size: 26rpx;
+    padding-left: 20rpx;
+    position: absolute;
+    right: 0;
+}

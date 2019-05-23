@@ -5,7 +5,6 @@
 
 .header {
     height: 300rpx;
-    /* box-sizing: border-box; */
     overflow: hidden;
     position: relative;
     display: flex;

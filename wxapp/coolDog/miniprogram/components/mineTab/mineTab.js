@@ -18,6 +18,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    recentTab () {
+      this.setData({
+        choose: true
+      })
+    },
+    collectTab () {
+      this.setData({
+        choose: false
+      })
+    },
   }
 })

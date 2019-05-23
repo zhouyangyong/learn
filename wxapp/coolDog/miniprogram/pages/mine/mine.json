@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "mineTab": "../../components/mineTab/mineTab"
+    "mineTab": "../../components/mineTab/mineTab",
+    "playAll": "../../components/playAll/playAll"
   }
 }

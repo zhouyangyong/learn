@@ -5,14 +5,15 @@
     border-top-right-radius: 12rpx;
     background-color: #ffffff;
     border-bottom: 1px solid #e5e5e5;
-    display: flex;
+    display: flex; 
     text-align: center;
     justify-content: center;
 }
 
 .recent {
-    border-bottom: 1px solid #34a0e6;
-    border-length: 15rpx;
+    width: 50%;
+    height: 70rpx;
+    position: relative;
 }
 
 .recent-txt {
@@ -20,9 +21,22 @@
     line-height: 30rpx;
 }
 
+.line {
+    width: 40rpx;
+    height: 0;
+    border: 1px solid;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
 .collect {
-    border-bottom: 1px solid #34a0e6;
-    border-length: 15rpx;
+    width: 50%;
+    height: 70rpx;
+    position: relative;
+
 }
 
 .collect-txt {
@@ -32,4 +46,8 @@
 
 .blue {
     color: #34a0e6;
+}
+
+.show {
+    display: block;
 }
