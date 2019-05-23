@@ -1,11 +1,14 @@
 <view class="page">
-        <!-- 用户信息 -->
-        <view class="header">
-            <view class="user">
-                <image class="user-avatar" src="../../images/dog.png" />
-                <text class="user-name">知名患者</text>
-            </view>
-            <image class="header-bg" src="../../images/dog.png" />
+    <!-- 用户信息 -->
+    <view class="header">
+        <view class="user">
+            <image class="user-avatar" src="../../images/dog.png" />
+            <text class="user-name">知名患者</text>
         </view>
-        
+        <image class="header-bg" src="../../images/dog.png" />
+    </view>
+    <!-- 最近播放和收藏内容 -->
+    <view class="content">
+        <mineTab></mineTab>
+    </view>
 </view>

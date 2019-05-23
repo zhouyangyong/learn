@@ -5,7 +5,7 @@
 
 .header {
     height: 300rpx;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     overflow: hidden;
     position: relative;
     display: flex;
@@ -14,6 +14,7 @@
 }
 
 .header-bg {
+    width: 100%;
     margin-top: -100rpx;
     filter: blur(10rpx);
     z-index: 1;
@@ -36,4 +37,9 @@
 .user-name {
     font-size: 40rpx;
     color: #ffffff;
+}
+
+.content {
+    width: 100%;
+    background-color: #ffffff;
 }

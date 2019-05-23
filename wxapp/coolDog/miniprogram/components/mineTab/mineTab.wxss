@@ -1,0 +1,35 @@
+.tab {
+    width: 100%;
+    height: 70rpx;
+    border-top-left-radius: 12rpx;
+    border-top-right-radius: 12rpx;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.recent {
+    border-bottom: 1px solid #34a0e6;
+    border-length: 15rpx;
+}
+
+.recent-txt {
+    font-size: 30rpx;
+    line-height: 30rpx;
+}
+
+.collect {
+    border-bottom: 1px solid #34a0e6;
+    border-length: 15rpx;
+}
+
+.collect-txt {
+    font-size: 30rpx;
+    line-height: 30rpx;
+}
+
+.blue {
+    color: #34a0e6;
+}

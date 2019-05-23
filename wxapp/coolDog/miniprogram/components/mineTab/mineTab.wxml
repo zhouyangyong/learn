@@ -1,0 +1,8 @@
+<view class="tab">
+    <view class="recent {{ choose  ? 'blue' : '' }}" bindtap="recentTab">
+        <text class="recent-txt">最近</text>
+    </view>
+    <view class="collect {{ choose  ? '' : 'blue' }}" bindtap="collectTab">
+        <text class="collect-txt">收藏</text>
+    </view>
+</view>
