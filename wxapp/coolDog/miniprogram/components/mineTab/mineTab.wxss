@@ -1,24 +1,24 @@
 .tab {
     width: 100%;
-    height: 70rpx;
+    height: 80rpx;
     border-top-left-radius: 12rpx;
     border-top-right-radius: 12rpx;
     background-color: #ffffff;
     border-bottom: 1px solid #e5e5e5;
     display: flex; 
     text-align: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .recent {
     width: 50%;
-    height: 70rpx;
+    height: 80rpx;
     position: relative;
 }
 
 .recent-txt {
     font-size: 30rpx;
-    line-height: 30rpx;
+    line-height: 80rpx;
 }
 
 .line {
@@ -34,14 +34,14 @@
 
 .collect {
     width: 50%;
-    height: 70rpx;
+    height: 80rpx;
     position: relative;
 
 }
 
 .collect-txt {
     font-size: 30rpx;
-    line-height: 30rpx;
+    line-height: 80rpx;
 }
 
 .blue {

@@ -1,16 +1,26 @@
 <view class="play">
-    <div class="play-content">
-        <!-- <view class="playAll">
-            <image class="playIcon" src="../../images/play.png" />
-            <text class="playTxt">全部播放</text>
+    <view class="play-content">
+        <view class="play-content-left">
+            <image class="leftIcon" src="../../images/play.png" />
+            <text class="leftTxt">全部播放</text>
         </view>
-        <view class="playType">
-            <image class="playTypeIcon" src="../../images/order2.png" />
-            <text class="playTypeTxt">顺序播放</text>
-        </view> -->
-        <image class="playIcon" src="../../images/play.png" />
-        <text class="playTxt">全部播放</text>
-        <image class="playTypeIcon" src="../../images/order2.png" />
-        <text class="playTypeTxt">顺序播放</text>
-    </div>
+        <view class="play-content-right" bindtap="showPlayType">
+            <image class="rightIcon" src="../../images/order2.png" />
+            <text class="rightTxt">顺序播放</text>
+        </view>
+    </view>
+    <view class="playType {{ hidden ? '' : 'show'}}">
+        <view class="orderPlay pt" bindtap="orderChange">
+            <image class="orederPlayIcon pti" src="../../images/order1.png" />
+            <text class="orderPlayTxt ptt">顺序播放</text>
+        </view>
+        <view class="randomPlay pt">
+            <image class="randomPlayIcon pti" src="../../images/random2.png" />
+            <text class="randomPlayTxt ptt">随机播放</text>
+        </view>
+        <view class="loopPlay pt">
+            <image class="loopPlayIcon pti" src="../../images/loop2.png" />
+            <text class="loopPlayTxt ptt">单曲循环</text>
+        </view>
+    </view>
 </view>

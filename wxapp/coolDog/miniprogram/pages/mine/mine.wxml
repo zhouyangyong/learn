@@ -12,4 +12,9 @@
         <mineTab></mineTab>
         <playAll></playAll>
     </view>
+    
+    <view class="noData">
+        <image class="noDataImg" src="../../images/noData.jpg" />
+        <text class="noDataTxt">暂无数据~</text>
+    </view>
 </view>
