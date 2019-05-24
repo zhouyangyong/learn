@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/search/search",
     "pages/mine/mine",
     "pages/index/index"
   ],
@@ -28,6 +29,5 @@
       }
     ]
   },
-  
   "sitemapLocation": "sitemap.json"
 }
