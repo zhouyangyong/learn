@@ -1,0 +1,8 @@
+<view class="newPage">
+    <newSongTab></newSongTab>
+    <view class="new-image-box">
+        <image class="new-image" src="../../images/dog.png" />
+    </view>
+    <playAll></playAll>
+    <songList></songList>
+</view>

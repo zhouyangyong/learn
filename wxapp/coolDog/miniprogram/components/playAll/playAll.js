@@ -11,7 +11,12 @@ Component({
    * 组件的初始数据
    */
   data: {
-    hidden: true
+    hidden: true,
+    playIconUrl: '../../images/order2.png',
+    playTypeTxt: '顺序播放',
+    orderIconUrl: '../../images/order1.png',
+    randomIconUrl: '../../images/random2.png',
+    loopIconUrl: '../../images/loop2.png'
   },
 
   /**
@@ -23,8 +28,35 @@ Component({
         hidden: false
       })
     },
-    orderChange(e) {
-      console.log(e);
+    orderChange() {
+      this.setData({
+        playIconUrl: '../../images/order2.png',
+        playTypeTxt: '顺序播放',
+        orderIconUrl: '../../images/order1.png',
+        randomIconUrl: '../../images/random2.png',
+        loopIconUrl: '../../images/loop2.png',
+        hidden: true
+      })
+    },
+    randomChange() {
+      this.setData({
+        playIconUrl: '../../images/random2.png',
+        playTypeTxt: '随机播放',
+        orderIconUrl: '../../images/order2.png',
+        randomIconUrl: '../../images/random1.png',
+        loopIconUrl: '../../images/loop2.png',
+        hidden: true
+      })
+    },
+    loopChange() {
+      this.setData({
+        playIconUrl: '../../images/loop2.png',
+        playTypeTxt: '循环播放',
+        orderIconUrl: '../../images/order2.png',
+        randomIconUrl: '../../images/random2.png',
+        loopIconUrl: '../../images/loop1.png',
+        hidden: true
+      })
     }
   }
 })

@@ -1,48 +1,10 @@
-// miniprogram/pages/index/index.js
+// miniprogram/pages/cool/cool.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    hotSongList: [
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      }
-    ],
     coolDogHotSong: [
       {
         imgUrl: '../../images/dog.png',
@@ -74,31 +36,6 @@ Page({
     ]
   },
 
-  goToSearchPage() {
-    wx.navigateTo({
-      url: '../search/search'
-    })
-  },
-  goToHotPage() {
-    wx.navigateTo({
-      url: '../hot/hot'
-    })
-  },
-  goToNewPage() {
-    wx.navigateTo({
-      url: '../new/new'
-    })
-  },
-  goToPopPage() {
-    wx.navigateTo({
-      url: '../pop/pop'
-    })
-  },
-  goToCoolPage() {
-    wx.navigateTo({
-      url: '../cool/cool'
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */

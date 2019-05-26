@@ -1,0 +1,14 @@
+.newPage {
+    width: 100%;
+    height: 100%;
+}
+
+.new-image-box {
+    height: 200rpx;
+    overflow: hidden;
+}
+
+.new-image {
+    width: 100%;
+    
+}

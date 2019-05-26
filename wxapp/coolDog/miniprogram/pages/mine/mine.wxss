@@ -45,7 +45,6 @@
 
 .noData {
     width: 100%;
-    /* height: 700rpx; */
     padding-top: 100rpx;
     display: flex;
     flex-direction: column;

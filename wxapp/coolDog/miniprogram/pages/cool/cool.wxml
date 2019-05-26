@@ -1,0 +1,22 @@
+<view class="coolPage">
+
+        <view class="listContent">
+            <block wx:for="{{coolDogHotSong}}" wx:key="{{coolDog}}">
+                <view class="coolDogList">
+                    <image src="{{item.imgUrl}}" class="list-image" />
+                    <view class="list-info">
+                        <view class="list-title">
+                            <text class="list-title ">{{item.listName}}</text>
+                            <view class="list-more-icon more-icon"></view>
+                        </view>
+                        <block wx:for="{{item.songs}}" wx:for-item="songs" wx:key="coolDog">
+                            <view class="list-songs">
+                                <text class="list-song">{{songs}}</text>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </block>
+        </view>
+
+</view>

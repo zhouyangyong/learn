@@ -5,21 +5,21 @@
             <text class="leftTxt">全部播放</text>
         </view>
         <view class="play-content-right" bindtap="showPlayType">
-            <image class="rightIcon" src="../../images/order2.png" />
-            <text class="rightTxt">顺序播放</text>
+            <image class="rightIcon" src="{{playIconUrl}}" />
+            <text class="rightTxt">{{playTypeTxt}}</text>
         </view>
     </view>
     <view class="playType {{ hidden ? '' : 'show'}}">
         <view class="orderPlay pt" bindtap="orderChange">
-            <image class="orederPlayIcon pti" src="../../images/order1.png" />
+            <image class="orederPlayIcon pti" src="{{orderIconUrl}}" />
             <text class="orderPlayTxt ptt">顺序播放</text>
         </view>
-        <view class="randomPlay pt">
-            <image class="randomPlayIcon pti" src="../../images/random2.png" />
+        <view class="randomPlay pt" bindtap="randomChange">
+            <image class="randomPlayIcon pti" src="{{randomIconUrl}}" />
             <text class="randomPlayTxt ptt">随机播放</text>
         </view>
-        <view class="loopPlay pt">
-            <image class="loopPlayIcon pti" src="../../images/loop2.png" />
+        <view class="loopPlay pt" bindtap="loopChange">
+            <image class="loopPlayIcon pti" src="{{loopIconUrl}}" />
             <text class="loopPlayTxt ptt">单曲循环</text>
         </view>
     </view>

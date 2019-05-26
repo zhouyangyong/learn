@@ -1,0 +1,14 @@
+<view class="newTab">
+    <view class="chinese pos {{tabIndex === 1 ? 'blue' : ''}}" bindtap="toChinese">
+        <text class="chinese-txt nt">华语</text>
+        <view class="line {{tabIndex === 1 ? 'show' : ''}}"></view>
+    </view>
+    <view class="western pos {{tabIndex === 2 ? 'blue' : ''}}" bindtap="toWestern">
+        <text class="western-txt nt">欧美</text>
+        <view class="line {{tabIndex === 2 ? 'show' : ''}}"></view>
+    </view>
+    <view class="JapanKorea pos {{tabIndex === 3 ? 'blue' : ''}}" bindtap="toJapanKorea">
+        <text class="JapanKorea-txt nt">日韩</text>
+        <view class="line {{tabIndex === 3 ? 'show' : ''}}"></view>
+    </view>
+</view>

@@ -1,0 +1,49 @@
+.coolPage {
+    width: 100%;
+    height: 100%;
+    padding: 20rpx 20rpx 20rpx 20rpx;
+    box-sizing: border-box;
+}
+
+.coolDogList {
+    width: 100%;
+    height: 100%;
+    padding-top: 6rpx;
+}
+
+.list-image {
+    width: 230rpx;
+    height: 230rpx;
+    border-radius: 8rpx;
+}
+
+.list-info {
+    width: 350rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    float: right;
+    padding-top: 20rpx;
+    padding-bottom: 10rpx;
+    padding-right: 110rpx;
+    border-bottom: 1rpx solid #eeeeee;
+}
+
+.list-title {
+    font-size: 34rpx;
+}
+
+.more-icon {
+    width: 18rpx;
+    height: 18rpx;
+    border: 1px solid #aaaaaa;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    transform: rotate(45deg);
+    display: inline-block
+} 
+
+.list-song {
+    font-size: 28rpx;
+    color: #aaaaaa;
+}

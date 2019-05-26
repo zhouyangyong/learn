@@ -1,27 +1,26 @@
-.mineTab {
+.newTab {
     width: 100%;
     height: 80rpx;
     border-top-left-radius: 12rpx;
     border-top-right-radius: 12rpx;
     background-color: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
     display: flex; 
     text-align: center;
+    justify-content: center;
 }
 
-.recent {
-    width: 50%;
-    height: 80rpx;
+.pos {
+    flex: 1;
     position: relative;
 }
 
-.recent-txt {
+.nt {
     font-size: 30rpx;
     line-height: 80rpx;
 }
 
 .line {
-    width: 40rpx;
+    width: 36rpx;
     height: 0;
     border: 1px solid;
     position: absolute;
@@ -29,18 +28,6 @@
     left: 50%;
     transform: translateX(-50%);
     display: none;
-}
-
-.collect {
-    width: 50%;
-    height: 80rpx;
-    position: relative;
-
-}
-
-.collect-txt {
-    font-size: 30rpx;
-    line-height: 80rpx;
 }
 
 .blue {

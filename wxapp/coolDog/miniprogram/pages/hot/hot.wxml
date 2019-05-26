@@ -1,0 +1,9 @@
+<view class="hotPage">
+    <view class="header">
+        <image class="header-image" src="../../images/dog.png" />
+    </view>
+    <view class="songsInfo">
+        <playAll></playAll>
+        <songList></songList>
+    </view>
+</view>

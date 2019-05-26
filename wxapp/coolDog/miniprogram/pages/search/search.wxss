@@ -42,3 +42,23 @@
     background-color: #eeeeee;
     flex: 1;
 }
+
+.search-surprise {
+    width: 100%;
+    padding-top: 400rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-surprise-Img {
+    width: 400rpx;
+    height: 400rpx;
+    border-radius: 50%;
+}
+
+.search-surprise-Txt {
+    font-size: 30rpx;
+    color: #858585;
+}

@@ -1,0 +1,17 @@
+<view class="songList">
+    <view class="list-index">
+        <text class="num">1</text>
+    </view>
+    <view class="songItem">
+        <view class="songInfo">
+            <text class="songName">你的酒馆对我打了烊</text>
+            <text class="singerName">陈雪凝 -《你的酒馆对我打了烊》</text>
+        </view>
+        <view class="playIcon">
+            <image class="play-icon-image" src="../../images/play.png" />
+        </view>
+        <view class="popupIcon">
+            <image class="popup-icon-image" src="../../images/threePoint.png" />
+        </view>
+    </view>
+</view>

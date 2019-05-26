@@ -6,4 +6,8 @@
             <input type="text" class="header-input" placeholder="请输入歌手或歌曲名" focus="{{focus}}" />
         </view>
     </view>
+    <view class="search-surprise">
+        <image class="search-surprise-Img" src="../../images/surprise.jpg" />
+        <text class="search-surprise-Txt">搜一下有惊喜哦~</text>
+    </view>
 </view>

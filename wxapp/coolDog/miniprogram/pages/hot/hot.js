@@ -1,11 +1,11 @@
-// miniprogram/pages/search/search.js
+// miniprogram/pages/hot/hot.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    focus: true
+
   },
 
   /**

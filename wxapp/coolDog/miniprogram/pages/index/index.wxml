@@ -3,7 +3,7 @@
     <view class="header">
         <view class="headerItem">
             <image class="search-icon" src="../../images/search.png" />
-            <input type="text" class="header-input" placeholder="请输入歌手或歌曲名" focus="{{focus}}" />
+            <input type="text" bindtap="goToSearchPage" class="header-input" placeholder="请输入歌手或歌曲名" focus="{{focus}}" />
         </view>
     </view>
     <!-- 歌曲信息 -->
@@ -12,7 +12,7 @@
         <view class="hot-song">
             <view class="hot-song-title">
                 <text class="title">热门歌曲</text>
-                <view class="more" bindtap="{{ goToMoreHotSong }}">
+                <view class="more" bindtap="goToHotPage">
                     <text class="more-text">更多</text>
                     <view class="more-icon"></view>
                 </view>
@@ -31,7 +31,7 @@
         <view class="new-song">
             <view class="new-song-title">
                 <text class="title">新歌首发</text>
-                <view class="more" bindtap="{{ goToMoreHotSong }}">
+                <view class="more" bindtap="goToNewPage">
                     <text class="more-text">更多</text>
                     <view class="more-icon"></view>
                 </view>
@@ -50,7 +50,7 @@
         <view class="pop-song">
             <view class="pop-song-title">
                 <text class="title">热门歌单</text>
-                <view class="more" bindtap="{{ goToMoreHotSong }}">
+                <view class="more" bindtap="goToPopPage">
                     <text class="more-text">更多</text>
                     <view class="more-icon"></view>
                 </view>
@@ -74,7 +74,7 @@
         <view class="coolDog-hot-song">
             <view class="coolDog-song-title">
                 <text class="title">酷狗热歌榜</text>
-                <view class="more" bindtap="{{ goToMoreHotSong }}">
+                <view class="more" bindtap="goToCoolPage">
                     <text class="more-text">更多</text>
                     <view class="more-icon"></view>
                 </view>

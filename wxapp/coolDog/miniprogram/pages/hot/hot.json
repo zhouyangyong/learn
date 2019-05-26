@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "playAll": "../../components/playAll/playAll",
+    "songList": "../../components/songList/songList"
+  }
+}

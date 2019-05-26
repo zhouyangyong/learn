@@ -1,0 +1,66 @@
+.popPage {
+    width: 100%;
+    height: 100%;
+    padding: 20rpx 20rpx 0 20rpx;
+    box-sizing: border-box;
+}
+
+.itemContent {
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cpt {
+    width: 350rpx;
+    padding-bottom: 30rpx;
+}
+
+.song-image {
+    width: 350rpx;
+    height: 350rpx;
+    display: block;
+    border-radius: 8rpx;
+    z-index: 1;
+}
+
+.songListName {
+    font-size: 30rpx;
+    display: block;
+}
+
+.songListSinger {
+    font-size: 22rpx;
+    color: #aaaaaa;
+}
+
+.popSongImage {
+    position: relative;
+}
+
+.playNum {
+    position: absolute;
+    padding-top: 180rpx;
+    padding-left: 10rpx;
+    display: inline-block;
+    text-align: center;
+}
+
+.earPhoneIcon {
+    width: 30rpx;
+    height: 30rpx;
+    display: inline-block;
+    padding-top: 130rpx;
+    z-index: 10;
+}
+
+.num {
+    font-size: 22rpx;
+    color: #ffffff;
+    vertical-align: middle;
+    padding-bottom: 5rpx;
+    padding-left: 10rpx;
+    display: inline-block;
+    z-index: 10;
+}

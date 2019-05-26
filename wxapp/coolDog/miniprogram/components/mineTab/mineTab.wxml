@@ -1,4 +1,4 @@
-<view class="tab">
+<view class="mineTab">
     <view class="recent {{ choose  ? 'blue' : '' }}" bindtap="recentTab">
         <text class="recent-txt">最近</text>
         <view class="line {{ choose  ? 'show' : '' }}"></view>

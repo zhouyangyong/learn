@@ -1,0 +1,16 @@
+<view class="popPage">
+    <view class="itemContent">
+        <block wx:for="{{hotSongList}}" wx:key="item">
+            <view class="popSongList cpt">
+                <view class="popSongImage">
+                    <view class="playNum">
+                        <image class="earPhoneIcon" src="../../images/earPhone.png" />
+                        <text class="num">{{item.playNum}}</text>
+                    </view>
+                </view>
+                <image class="song-image" src="{{item.imgUrl}}" />
+                <text class="songListName">{{item.name}}</text>
+            </view>
+        </block>
+    </view>
+</view>

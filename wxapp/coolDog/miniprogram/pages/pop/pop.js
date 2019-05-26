@@ -1,4 +1,4 @@
-// miniprogram/pages/index/index.js
+// miniprogram/pages/pop/pop.js
 Page({
 
   /**
@@ -8,7 +8,7 @@ Page({
     hotSongList: [
       {
         imgUrl: '../../images/dog.png',
-        name: '绿色',
+        name: '绿色绿色绿色绿色绿色绿色绿色绿色绿色绿色',
         singer: '陈雪凝',
         playNum: '10万'
       },
@@ -41,64 +41,10 @@ Page({
         name: '绿色',
         singer: '陈雪凝',
         playNum: '10万'
-      }
-    ],
-    coolDogHotSong: [
-      {
-        imgUrl: '../../images/dog.png',
-        listName: '酷狗飙升榜',
-        songs: [
-          '李宇春、吴青峰 - 作为怪物',
-          '李宇春、吴青峰 - 作为怪物',
-          '李宇春、吴青峰 - 作为怪物'
-        ]
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        listName: '酷狗飙升榜',
-        songs: [
-          '李宇春、吴青峰 - 作为怪物',
-          '李宇春、吴青峰 - 作为怪物',
-          '李宇春、吴青峰 - 作为怪物'
-        ]
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        listName: '酷狗飙升榜',
-        songs: [
-          '李宇春、吴青峰 - 作为怪物',
-          '李宇春、吴青峰 - 作为怪物',
-          '李宇春、吴青峰 - 作为怪物'
-        ]
       }
     ]
   },
 
-  goToSearchPage() {
-    wx.navigateTo({
-      url: '../search/search'
-    })
-  },
-  goToHotPage() {
-    wx.navigateTo({
-      url: '../hot/hot'
-    })
-  },
-  goToNewPage() {
-    wx.navigateTo({
-      url: '../new/new'
-    })
-  },
-  goToPopPage() {
-    wx.navigateTo({
-      url: '../pop/pop'
-    })
-  },
-  goToCoolPage() {
-    wx.navigateTo({
-      url: '../cool/cool'
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
