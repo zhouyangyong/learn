@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/mine/mine",
+    "pages/new/new",
     "pages/index/index",
     "pages/search/search",
     "pages/hot/hot",
     "pages/pop/pop",
-    "pages/new/new",
+    "pages/mine/mine",
     "pages/cool/cool"
   ],
   "window": {

@@ -10,8 +10,23 @@
         <view class="playIcon">
             <image class="play-icon-image" src="../../images/play.png" />
         </view>
-        <view class="popupIcon">
+        <view class="popupIcon" bindtap='onPopup'>
             <image class="popup-icon-image" src="../../images/threePoint.png" />
         </view>
     </view>
 </view>
+    <van-popup 
+        show="{{ show }}" 
+        overlay="true"
+        close-on-click-overlay="true"
+        bind:transitionEnd="onClose"
+    >
+        <view class="popup-content">
+            <view class="collect-song">
+                <text>收藏歌曲</text>        
+            </view>
+            <view class="cancel">
+                <text>取消</text>
+            </view>
+        </view>
+    </van-popup>
