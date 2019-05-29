@@ -22,6 +22,21 @@ Component({
       this.setData({
         show: true
       })
+    },
+    onClose () {
+      this.setData({
+        show: false
+      })
+    },
+    onCollectSong () {
+      this.setData({
+        show: false
+      })
+    },
+    onCancel () {
+      this.setData({
+        show: false
+      })
     }
   }
 })

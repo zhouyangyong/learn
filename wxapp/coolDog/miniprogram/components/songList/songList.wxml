@@ -15,18 +15,16 @@
         </view>
     </view>
 </view>
-    <van-popup 
-        show="{{ show }}" 
-        overlay="true"
-        close-on-click-overlay="true"
-        bind:transitionEnd="onClose"
-    >
-        <view class="popup-content">
-            <view class="collect-song">
-                <text>收藏歌曲</text>        
-            </view>
-            <view class="cancel">
-                <text>取消</text>
-            </view>
+<van-popup 
+    show="{{ show }}" 
+    bind:close="onClose"
+>
+    <view class="popup-content">
+        <view class="collect-song" bindtap="onCollectSong">
+            <text>收藏歌曲</text>
         </view>
-    </van-popup>
+        <view class="cancel" bindtap="onCancel">
+            <text>取消</text>
+        </view>
+    </view>
+</van-popup>
