@@ -1,8 +1,9 @@
 <template>
-    <div class="mainContent">
-      <Header></Header>
-      <Slide></Slide>
-    </div>
+  <div class="mainContent">
+    <Header></Header>
+    <Slide></Slide>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>

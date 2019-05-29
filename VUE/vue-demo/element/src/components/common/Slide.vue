@@ -16,7 +16,7 @@
           <span>用户管理</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="2-1">用户列表</el-menu-item>
+          <el-menu-item index="/main/user-list">用户列表</el-menu-item>
           <el-menu-item index="2-2">用户信息</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
