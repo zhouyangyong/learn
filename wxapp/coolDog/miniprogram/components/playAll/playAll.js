@@ -4,19 +4,19 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+  
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    hidden: true,
     playIconUrl: '../../images/order2.png',
     playTypeTxt: '顺序播放',
     orderIconUrl: '../../images/order1.png',
     randomIconUrl: '../../images/random2.png',
-    loopIconUrl: '../../images/loop2.png'
+    loopIconUrl: '../../images/loop2.png',
+    hidden: true
   },
 
   /**
@@ -51,10 +51,15 @@ Component({
     loopChange() {
       this.setData({
         playIconUrl: '../../images/loop2.png',
-        playTypeTxt: '循环播放',
+        playTypeTxt: '单曲循环',
         orderIconUrl: '../../images/order2.png',
         randomIconUrl: '../../images/random2.png',
         loopIconUrl: '../../images/loop1.png',
+        hidden: true
+      })
+    },
+    onClose() {
+      this.setData({
         hidden: true
       })
     }

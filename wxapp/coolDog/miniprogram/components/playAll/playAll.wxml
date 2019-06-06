@@ -9,7 +9,10 @@
             <text class="rightTxt">{{playTypeTxt}}</text>
         </view>
     </view>
-    <view class="playType {{ hidden ? '' : 'show'}}">
+</view>
+<view class="playTypeBox {{ hidden ? 'hidden' : 'show'}}">
+    <view class="blank" bindtap='onClose'></view>
+    <view class="playType {{ hidden ? 'hidden' : 'show'}}">
         <view class="orderPlay pt" bindtap="orderChange">
             <image class="orederPlayIcon pti" src="{{orderIconUrl}}" />
             <text class="orderPlayTxt ptt">顺序播放</text>
