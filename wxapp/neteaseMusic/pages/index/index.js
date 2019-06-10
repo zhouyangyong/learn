@@ -49,7 +49,7 @@ Page({
         idx: 1
       },
       success: res => {
-        // console.log('热歌', res);
+        console.log('热歌', res);
         const songLists = res.data.playlist.tracks;
         this.setData({
           songLists

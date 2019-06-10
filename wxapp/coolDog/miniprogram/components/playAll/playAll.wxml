@@ -10,8 +10,8 @@
         </view>
     </view>
 </view>
-<view class="playTypeBox {{ hidden ? 'hidden' : 'show'}}">
-    <view class="blank" bindtap='onClose'></view>
+<!-- <view class="playTypeBox {{ hidden ? 'hidden' : 'show'}}"> -->
+    <!-- <view class="blank" bindtap='onClose'></view> -->
     <view class="playType {{ hidden ? 'hidden' : 'show'}}">
         <view class="orderPlay pt" bindtap="orderChange">
             <image class="orederPlayIcon pti" src="{{orderIconUrl}}" />
@@ -26,4 +26,4 @@
             <text class="loopPlayTxt ptt">单曲循环</text>
         </view>
     </view>
-</view>
+<!-- </view> -->
