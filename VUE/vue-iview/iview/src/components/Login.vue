@@ -21,15 +21,16 @@
         <Checkbox v-model="formLogin.remember">记住密码</Checkbox>
       </FormItem>
       <FormItem>
-        <Row>
-          <i-col :xs= "{ span: 4, offset: 6 }">
-            <Button type="primary" @click="handleSubmit('formLogin')">登录</Button>
-          </i-col>
-          <i-col :xs= "{ span: 4, offset: 6 }">
-            <Button type="primary" @click="formLoginReset('formLogin')">重置</Button>
-          </i-col>
-        </Row>
+          <Row>
+              <i-col :xs="{ span: 5, offset: 5}">
+                <Button type="primary" @click="handleSubmit('formLogin')">登陆</Button>
+              </i-col>
+              <i-col :xs="{ span: 5, offset: 5}">
+                <Button type="primary"  >重置</Button>
+              </i-col>
+          </Row>
       </FormItem>
+      
     </i-form>
   </div>
 </template>
@@ -69,39 +70,39 @@ export default {
     };
   },
   methods: {
-    handleSubmit (name) {
-      this.$refs[name].validate(valid => {
-        sessionStorage.setItem('user', JSON.stringify(this.formLogin.username))
-        if (valid) {
-          this.$Message.success('提交成功'),
-          this.$router.push({ path: '/table' })
-        } else {
-          this.$Message.error('登录失败')
-        }
-        if (this.formLogin.remember) {
-          sessionStorage.setItem('username', JSON.stringify(this.formLogin.username))
-          sessionStorage.setItem('password', JSON.stringify(this.formLogin.password))
-        } else {
-          sessionStorage.removeItem('username')
-          sessionStorage.removeItem('password')
-        }
+    handleSubmit(name){
+      this.$refs[name].validate(valid =>{
+           sessionStorage.setItem('user',this.formLogin.username)
+           if(valid){
+             this.$Message.success('提交成功'),
+             this.$router.push({path: '/table'})
+           }else{
+             this.$Message.error('失败')
+           }
+           if (this.formLogin.remember){
+             sessionStorage.setItem('username', this.formLogin.username)
+           }else{
+             sessionStorage.removeItem('username', this.formLogin.username)
+           }
       })
     }
-  }
+  },
 };
 </script>
 
 <style scoped>
 .login {
-  width: 100%;
-  height: 100%;
-  background: url(../assets/bg.jpg) no-repeat;
-  background-size: cover;
-  overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /* background-size: cover; */
+    background: url('../assets/bg.jpg') no-repeat; 
+    background-size: cover;
+    overflow: hidden;
+
 }
 .card-box {
   padding: 20px;
-  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
+  /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
   -webkit-border-radius: 5px;
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -120,13 +121,18 @@ export default {
 }
 .formLogin-title {
   text-align: center;
-  font-size: 28px;
+  font-seze: 28px;
 }
 .formLogin-title h3 {
   font-size: 18px;
 }
 .login-no-bottom {
   margin-bottom: 10px;
-  text-align: left;
+}
+.ivu-form-item-content {
+    text-align: center;
 }
 </style>
+
+
+
