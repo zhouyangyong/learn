@@ -82,7 +82,7 @@ export default {
     }
   },
   created () {
-    console.log(this.seller)
+    // console.log(this.seller)
     this.classMap = ['decrease', 'discount', 'guarantee', 'invoice', 'special']
   },
   methods: {

@@ -57,13 +57,11 @@ export default {
   .tab-item
     flex: 1
     text-align center
-
     & > a
       display block
       font-size 14px
       color rgb(77, 85, 93)
       text-decoration none
-    
-    &.active
-      color rgb(240, 20, 20)
+      &.router-link-exact-active
+        color rgb(240, 20, 20)
 </style>
