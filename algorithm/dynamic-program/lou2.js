@@ -1,6 +1,5 @@
 // 什么可以存储之前的楼数?
 // 变量
-
 function lou(n) {
     if (n < 0) {
         return 0;

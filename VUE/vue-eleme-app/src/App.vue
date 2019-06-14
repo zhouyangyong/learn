@@ -36,7 +36,7 @@ export default {
         "https://www.easy-mock.com/mock/5ca45811c4e9a575b66b62c0/example/vue-eleme-seller"
       )
       .then(res => {
-        console.log(res);
+        // console.log(res);
         if (res.data.errno === 0) {
           this.seller = Object.assign({}, this.seller, res.data.data);
         }
