@@ -54,6 +54,12 @@
           </li>
         </ul>
       </div>
+      <shopcart ref="shopcart" 
+      :selectFoods="selectFoods" 
+      :deliveryPrice="seller.deliveryPrice"
+      :minPrice="seller.minPrice"
+      >
+      </shopcart>
     </div>
   </div>
 </template>
@@ -61,8 +67,14 @@
 <script>
 import BScorll from 'better-scroll'
 import cartcontrol from '@/components/cartcontrol/cartcontrol'
+import shopcart from '@/components/shopcart/shopcart'
 export default {
   name: 'Goods',
+  props: {
+    seller: {
+      type: Object
+    }
+  },
   data () {
     return {
       classMap: [],
@@ -81,10 +93,22 @@ export default {
         }
       }
       return 0
+    },
+    selectFoods () {
+      let foods = [];
+      this.goods.forEach(good => {
+        good.foods.forEach(food => {
+          if(food.count) {
+            foods.push(food)
+          }
+        })
+      })
+      return foods;
     }
   },
   components: {
-    cartcontrol
+    cartcontrol,
+    shopcart
   },
   methods: {
     selectMenu (index, event) {
@@ -105,7 +129,7 @@ export default {
       }) 
       this.foodScroll.on('scroll', pos => {
         this.scrollY = Math.abs(Math.round(pos.y))
-        console.log(this.scrollY)
+        // console.log(this.scrollY)
       })
     },
     addFood (target) {
