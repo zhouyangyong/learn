@@ -103,6 +103,7 @@ export default {
           }
         })
       })
+      // console.log(foods);
       return foods;
     }
   },
@@ -118,6 +119,13 @@ export default {
       let foodList = this.$refs.foodList
       let el = foodList[index]
       this.foodScroll.scrollToElement(el, 300)
+    },
+    selectFoods (food, event) {
+      if (!event._constructed) {
+        return
+      }
+      this.selectFood = food
+      this.$refs.food.show()
     },
     _initScroll () { // 私有方法
       this.menuScroll = new BScorll(this.$refs.menuWrapper, {
@@ -138,7 +146,8 @@ export default {
     _drop () {
       // 体验优化，异步执行下落动画
       this.$nextTick(() => {
-        // 动画组件       
+        // 动画组件   
+        this.$refs.shopcart.drop(target)   
       })
     },
     _calculateHeight () {
