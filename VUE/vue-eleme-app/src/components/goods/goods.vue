@@ -26,7 +26,8 @@
           >
             <h1 class="title">{{item.name}}</h1>
             <ul>
-              <li v-for="(food, index) in item.foods" 
+              <li @click="selectFood(food, $event)"
+              v-for="(food, index) in item.foods" 
               :key="index"
               class="food-item border-1px"
               >
@@ -120,7 +121,7 @@ export default {
       let el = foodList[index]
       this.foodScroll.scrollToElement(el, 300)
     },
-    selectFoods (food, event) {
+    selectFood (food, event) {
       if (!event._constructed) {
         return
       }
@@ -143,7 +144,7 @@ export default {
     addFood (target) {
       this._drop(target)
     },
-    _drop () {
+    _drop (target) {
       // 体验优化，异步执行下落动画
       this.$nextTick(() => {
         // 动画组件   

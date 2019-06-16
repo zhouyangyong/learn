@@ -149,13 +149,24 @@ export default {
     }
   },
   methods: {
+    drop (el) {
+      for (let i = 0; i < this.balls.length; i++) {
+        let ball = this.balls[i]
+        if (!ball.show) {
+          ball.show = true
+          ball.el = el
+          this.dropBalls.push(ball)
+          return
+        }
+      }
+    },
     toggleList () {
       
     },
     beforeDrop (el) {
       let count = this.balls.length
       while (count--) {
-        let ball = balls[count]
+        let ball = this.balls[count]
         if (ball.show) {
           let rect = ball.el.getBoundingClientRect()
           let x = rect.left - 32
