@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <LoginStatus />
-    <ShopCart />
+    <ShopCart a="1" b="2" />
       {/* <WithLoginStatus />
       <WithShopCart a="1" b="2" /> */}
     </>
