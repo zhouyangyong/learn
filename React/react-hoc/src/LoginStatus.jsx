@@ -1,7 +1,7 @@
 import React from 'react';
 import withLogin from './WithLogin';
 
-@withLogin
+@withLoginq 
 class LoginStatus extends React.Component {
   render () {
     return (
