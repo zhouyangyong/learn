@@ -10,3 +10,5 @@ high order component
 
 ## @ 
 ES7 里面的装饰器 decorator
+
+## 装饰器模式
