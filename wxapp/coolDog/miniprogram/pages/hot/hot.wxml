@@ -4,6 +4,6 @@
     </view>
     <view class="songsInfo">
         <playAll></playAll>
-        <songList></songList>
+        <songList hotSongList="{{hotSongList}}"></songList>
     </view>
 </view>

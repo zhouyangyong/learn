@@ -87,7 +87,7 @@
     border-radius: 6rpx;
     position: absolute;
     right: 20rpx;
-    top: 456rpx;
+    top: 70rpx;
     z-index: 200;
     padding: 0rpx 14rpx;
     box-sizing: border-box;
