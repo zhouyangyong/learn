@@ -2,10 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/mine/mine",
-    "pages/search/search",
     "pages/hot/hot",
-    "pages/pop/pop",
     "pages/new/new",
+    "pages/search/search",
+    "pages/pop/pop",
     "pages/cool/cool"
   ],
   "window": {

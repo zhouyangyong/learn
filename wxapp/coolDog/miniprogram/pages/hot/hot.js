@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: 'https://www.gdongpay.com/API/top/list?idx=0',
+      url: 'https://www.gdongpay.com/API/top/list?idx=1',
       data: {
         id: 1
       },
@@ -30,7 +30,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**

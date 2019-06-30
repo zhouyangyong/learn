@@ -5,44 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hotSongList: [
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      },
-      {
-        imgUrl: '../../images/dog.png',
-        name: '绿色',
-        singer: '陈雪凝',
-        playNum: '10万'
-      }
-    ],
+    hotSongList: [],
+    newSongList: [],
     coolDogHotSong: [
       {
         imgUrl: '../../images/dog.png',
@@ -102,8 +66,28 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+
   onLoad: function (options) {
-    
+    wx.request({
+      url: 'https://www.gdongpay.com/API/top/list?idx=1',
+      success: res => {
+        const hotSongList = res.data.playlist.tracks;
+        const songList = hotSongList.slice(0,6)
+        this.setData({
+          hotSongList: songList
+        })
+      }
+    })
+    wx.request({
+      url: 'https://www.gdongpay.com/API/top/list?idx=17',
+      success: res => {
+        const newSongList = res.data.playlist.tracks;
+        const songList = newSongList.slice(0,6)
+        this.setData({
+          newSongList: songList
+        })
+      }
+    })
   },
 
   /**

@@ -1,8 +1,48 @@
 <view class="newPage">
-    <newSongTab></newSongTab>
-    <view class="new-image-box">
-        <image class="new-image" src="../../images/dog.png" />
-    </view>
-    <playAll></playAll>
-    <songList></songList>
+  <view class="newTab">
+    <block wx:for="{{type}}" wx:key="{{index}}">
+      <view class="pos {{tabIndex === index ? 'blue' : ''}}" data-id="{{index}}" bindtap="toggleType">
+        <text class="nt">{{item}}</text>
+        <view class="line {{tabIndex === index ? 'show' : ''}}"></view>
+      </view>
+    </block>
+  </view>
+  <view class="new-image-box">
+    <image class="new-image" src="{{img}}" />
+  </view>
+  <playAll></playAll>
+  <view class="songList">
+    <block wx:for="{{songList}}" wx:key="{{index}}">
+      <view>
+        <view class="songList">
+          <view class="list-index">
+            <text class="num">{{index+1}}</text>
+          </view>
+          <view class="songItem">
+            <view class="songInfo">
+              <text class="songName">{{item.name}}</text>
+              <text class="singerName">{{item.artists[0].name}}</text>
+            </view>
+            <view class="playIcon" data-id="{{item.id}}" bindtap="togglePlay">
+              <image class="play-icon-image" src="{{isPlay?'../../images/pause.png':'../../images/play.png'}}" />
+            </view>
+            <view class="popupIcon" bindtap='onPopup'>
+              <image class="popup-icon-image" src="../../images/threePoint.png" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <van-popup show="{{ show }}" bind:close="onClose">
+      <view class="popup-content">
+        <view class="collect-song" bindtap="onCollectSong">
+          <text>收藏歌曲</text>
+        </view>
+        <view class="cancel" bindtap="onCancel">
+          <text>取消</text>
+        </view>
+      </view>
+    </van-popup>
+  </view>
+  <!-- <songList songList="{{songList}}"></songList> -->
 </view>

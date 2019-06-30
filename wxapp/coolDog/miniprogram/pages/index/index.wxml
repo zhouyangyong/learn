@@ -20,9 +20,9 @@
             <view class="itemContent">
                 <block wx:for="{{hotSongList}}" wx:key="item">
                     <view class="hotSongList cpt">
-                        <image class="song-image" src="{{item.imgUrl}}" />
+                        <image class="song-image" src="{{item.al.picUrl}}" />
                         <text class="songListName">{{item.name}}</text>
-                        <text class="songListSinger">{{item.singer}}</text>
+                        <text class="songListSinger">{{item.ar[0].name}}</text>
                     </view>
                 </block>
             </view>
@@ -37,11 +37,11 @@
                 </view>
             </view>
             <view class="itemContent">
-                <block wx:for="{{hotSongList}}" wx:key="item">
+                <block wx:for="{{newSongList}}" wx:key="item">
                     <view class="newSongList cpt">
-                        <image class="song-image" src="{{item.imgUrl}}" />
+                        <image class="song-image" src="{{item.al.picUrl}}" />
                         <text class="songListName">{{item.name}}</text>
-                        <text class="songListSinger">{{item.singer}}</text>
+                        <text class="songListSinger">{{item.ar[0].name}}</text>
                     </view>
                 </block>
             </view>

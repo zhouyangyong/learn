@@ -1,8 +1,7 @@
 {
   "navigationBarTitleText": "新歌首发",
   "usingComponents": {
-    "newSongTab": "../../components/newSongTab/newSongTab",
     "playAll": "../../components/playAll/playAll",
-    "songList": "../../components/songList/songList"
+    "van-popup": "../../vant/popup/index"
   }
 }

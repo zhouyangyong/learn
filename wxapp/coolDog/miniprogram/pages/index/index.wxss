@@ -99,13 +99,21 @@
 }
 
 .songListName {
+    width: 100px;
     font-size: 30rpx;
     display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .songListSinger {
+    width: 100%;
     font-size: 22rpx;
     color: #aaaaaa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .new-song {
