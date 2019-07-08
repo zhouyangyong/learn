@@ -12,8 +12,29 @@ new 实现原理：
 prototype 显式原型 只有函数有
 __proto__ 隐式原型 任何都有
 
+
+# q2 
 call apply bind
+
+this 作用域
 
 箭头函数没有this
 
 delete方法
+
+
+# q3 深拷贝和浅拷贝 
+https://juejin.im/post/5b5dcf8351882519790c9a2e
+WeakMap
+RegExp
+
+
+# q4 闭包
+闭包的原理：有权限访问其他函数的作用域的函数
+
+1. 阻止作用域被js垃圾回收
+2. 创建私有变量
+3. 创建块级作用域
+
+# q5 数组去重
+Set typeOf includes map reduce
