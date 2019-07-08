@@ -1,0 +1,8 @@
+.test {
+  --fontColor: yellowgreen;
+  color: var(--fontColor);
+}
+.homeAvator {
+  widows: 100px;
+  height: 100px;
+}
