@@ -38,3 +38,8 @@ RegExp
 
 # q5 数组去重
 Set typeOf includes map reduce
+
+
+# q6 防抖节流
+
+# q7 instanceof 原理
