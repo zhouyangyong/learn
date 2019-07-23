@@ -11,3 +11,8 @@ SPA #root 其他的都是.vue => js index.html html输出内容 SEO 极差
   mvvm webpack  => .js => render => root  (JS DOM)
   加载过程
   asyncData 
+
+- nuxt 配置
+  nuxt.config.js
+  layout SEO
+  plugins: 

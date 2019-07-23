@@ -21,11 +21,17 @@ mongoose.connection
   })
   .once('open', async () => {
     console.log('数据库连接成功');
-    let user = new User({
-      role: 'superAdmin',
-      username: 'root',
-      password: '123456',
-      email: 'xxx@163.com'
+    // let user = new User({
+    //   role: 'superAdmin',
+    //   username: 'root',
+    //   password: '123456',
+    //   email: 'xxx@163.com'
+    // });
+    // user.save();
+    const Article = mongoose.model('Article');
+    const article = new Article({
+      title: '欢迎使用博客',
+      content: '当您看到这篇文章时，说明已经.....'
     });
-    user.save();
+    article.save();
   })
