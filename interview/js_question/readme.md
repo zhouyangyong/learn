@@ -43,3 +43,5 @@ Set typeOf includes map reduce
 # q6 防抖节流
 
 # q7 instanceof 原理
+
+# q8 事件委托
