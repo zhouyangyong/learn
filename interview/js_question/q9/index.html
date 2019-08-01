@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>addEventListener</title>
+  <style>
+    #page {
+      width: 500px;
+      height: 500px;
+      background-color: aqua;
+    }
+
+    #content {
+      width: 200px;
+      height: 200px;
+      background-color: bisque;
+    }
+
+    #box {
+      width: 60px;
+      height: 60px;
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- js事件流 -->
+  <div id="page">
+    <div id="content">
+      <div id="box">点我</div>
+    </div>
+  </div>
+  <script>
+    let box = document.getElementById('box')
+    let content = document.getElementById('content')
+    let page = document.getElementById('page')
+
+    // addEventListener的第三个参数 true为捕获 false为冒泡 默认为false
+    box.addEventListener('click', function () {
+      console.log('box')
+    }, true)
+    content.addEventListener('click', function () {
+      console.log('content')
+    }, true)
+    page.addEventListener('click', function () { // 先冒泡，后捕获
+      console.log('page')
+    }, true)
+  </script>
+
+</body>
+
+</html>
