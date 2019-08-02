@@ -48,9 +48,21 @@ Set typeOf includes map reduce
 
 # q9 事件流
 
-
 clientHeight：表示的是可视区域的高度，不包含border和滚动条
 offsetHeight：表示可视区域的高度，包含了border和滚动条
 scrollHeight：表示了所有区域的高度，包含了因为滚动被隐藏的部分。
 clientTop：表示边框border的厚度，在未指定的情况下一般为0
 scrollTop：滚动后被隐藏的高度，获取对象相对于由offsetParent属性指定的父坐标(css定位的元素或body元素)距离顶端的高度。
+
+# q10 类的创建和继承
+
+# q11 click 再ios手机上有300ms 延迟，原因即解决方法
+  1. <meta name="viewport" content="width=device-width, initial-scale=none">
+  2. FastClick, 其原理是：检测到touchend事件后，立刻发出模拟click事件，并把浏览器300ms之后真是发出的事件阻断
+
+# localStorage sessionStorage Cookie
+  Cookie：数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器之间来回传递，而SessionStorage和localStorage不会自动把发给服务器，仅在本地缓存。cookie还有路径（path）的概念，可以限制cookie只属于某个路径下。存储大小只有4K左右
+
+  sessionStorage：仅在当前浏览器窗口关闭前有效，不能长久保存
+
+  localStorage：在所有的同源窗口都是共享的，cookie也是在同源窗口中可以共享的，            localStorage的大小在5M左右 
