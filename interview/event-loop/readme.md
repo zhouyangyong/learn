@@ -6,9 +6,15 @@ async task 进入我们的event 队列 等待执行
 宏任务 微任务 队列 
 将回调函数加入事件队列中 task queue 执行栈 
 macrotask(宏任务) 一行执行一次
-  setTimeout setInterval setImmediate I/O UI rendering
+  setTimeout setInterval requestAnimationFrame HTML的解析 
+  js的主线程 页面加载 用户交互 setImmediate 
+  I/O     UI rendering
 microtask(微任务) 优先执行 一次执行完
-  Promise process.nextTick 
+  Promise 
+  process.nextTick 
+  mutation.observer
+
+script(主程序代码) > process.nexTick > promise > setTimeout > setInterval > setImmedita > I/O > UI rendering
 
 C E D A B    D A 第一次的eventloop B 第二次的eventloop
 1. macrotasks ['A', 'B']
