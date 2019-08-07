@@ -2,13 +2,13 @@ const Koa = require('koa');
 const app = new Koa();
 
 app.use(async (ctx, next) => {
-  console.log(1);
-  await next();
-  console.log(2);
+    console.log(1);
+    await next();
+    console.log(2)
 })
 app.use(async (ctx) => {
-  ctx.body = '1230';
-  console.log(3);
+    ctx.body = '123';
+    console.log(3)
 })
 
-app.listen(8899);
+app.listen(9999);
