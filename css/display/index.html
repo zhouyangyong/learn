@@ -24,8 +24,13 @@
         console.log(app, "app");
         app.style.display = "block";
         const height = app.offsetHeight; // 会出现动画
+        // 为什么会出现动画了呢？ 因为我读取dom的这些特殊属性时，浏览器就会强制清空渲染队列一次，让我拿到最新的值。
+        // 也就是说读取的时候，其实已经是display为"block"了，因此。我们出现了过渡动画
         app.style.transform = "translateX(200px)";
       };
     </script>
   </body>
 </html>
+
+<!-- 要注意的一点是，除了手动读取特殊属性清空浏览器渲染队列外，浏览器也会有自己的一个队列阀值，当达到后，会自动清空。
+这就是为什么在一个for循环里面多次操作DOM，但是它不会真的渲染那么多次的原因，因为浏览器帮我们维护了一个队列，择机渲染。 -->
