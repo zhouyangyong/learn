@@ -1,0 +1,2 @@
+- webpack 是一个现代 JavaScript 应用程序的静态模块打包器
+- webpack 是基于入口的。webpack 会自动地递归解析入口所需要加载的所有资源文件，然后用不同的 Loader 来处理不同的文件，用 Plugin 来扩展 webpack 功能
